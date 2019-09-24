@@ -1,0 +1,47 @@
+.PictureCard {
+
+  width: 100%;
+  position: relative;
+
+  &-image {
+    width: 75%;
+    height: 15rem;
+    object-fit: cover;
+  }
+
+  &-card {
+    background-color: $grey1;
+    color: $white;
+    padding: 1rem;
+    box-sizing: border-box;
+    width: 75%;
+    position: absolute;
+    top: 50%;
+    left: 25%;
+
+    @media (min-width:750px) {
+      padding: 2rem;
+    }
+  }
+
+  &-title {
+    font-family: $headers-font;
+    font-weight: 800;
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.02rem;
+    margin-bottom: 1rem;
+
+    @media (min-width:750px) {
+      font-size: 1.25rem;
+    }
+  }
+
+  &-text {
+    font-family: $body-font;
+    font-weight: normal;
+    font-size: 1rem;
+    opacity: 0.9;
+    margin-bottom: 0;
+  }
+}

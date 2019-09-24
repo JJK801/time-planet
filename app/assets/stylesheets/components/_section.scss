@@ -1,0 +1,74 @@
+.Section {
+
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+
+  @media (min-width: 750px) {
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+  }
+
+  @media (min-width: 1000px) {
+    padding-top: 8rem;
+    padding-bottom: 8rem;
+  }
+
+  &--black {
+    background-color: $black;
+    color: $white;
+  }
+
+  &--lagoon {
+    background-color: $lagoon-blue;
+    color: $planet-black;
+  }
+
+  &--lightGrey {
+    background-color: $light-grey;
+    color: $planet-black;
+  }
+
+  &--lagoonTint2 {
+    background-color: $lagoon-blue-tint-2;
+    color: $planet-black;
+  }
+
+  &--twoColors {
+    background-color: $rainforest-blue-tint2;
+    color: $white;
+
+    @media (min-width: 550px) {
+      background: linear-gradient(to right,
+        $rainforest-blue-tint2 0%,
+        $rainforest-blue-tint2 50%,
+        $white 50%,
+        $white 100%);
+    }
+  }
+
+  &-text {
+    &--twoColorsRight {
+      color: $white;
+      opacity: 0.9;
+
+      @media (min-width: 550px) {
+        color: $grey1;
+        opacity: 1;
+      }
+
+      @media (min-width: 1000px) {
+        padding-left: 2rem;
+      }
+
+      @media (min-width: 1200px) {
+        padding-left: 5rem;
+      }
+    }
+
+    &--twoColorsLeft {
+      @media (min-width: 1000px) {
+        padding-right: 2rem;
+      }
+    }
+  }
+}
