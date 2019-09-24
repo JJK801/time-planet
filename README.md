@@ -1,24 +1,9 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## INTRO
 
-Things you may want to cover:
+Time for the Planet is a website to help raise money and find entrepreneurs to create companies dedicated to fight climate change.
 
-* Ruby version
+## STYLE
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+This website uses [Skeleton](http://getskeleton.com/) as a lightweight css framework (mostly for creating a grid).
