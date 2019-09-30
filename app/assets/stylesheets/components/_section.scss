@@ -35,6 +35,11 @@
     color: $planet-black;
   }
 
+  &--white {
+    background-color: $white;
+    color: $planet-black;
+  }
+
   &--lagoonTint2 {
     background-color: $lagoon-blue-tint-2;
     color: $planet-black;
@@ -53,6 +58,15 @@
     }
   }
 
+  &-imageBackground {
+    display: none;
+
+    @media (min-width: $breakpoint-md) {
+      display: block;
+    }
+    background-size: cover;
+  }
+
   &-text {
     &--twoColorsRight {
       color: $white;
@@ -62,6 +76,17 @@
         color: $grey1;
         opacity: 1;
       }
+    }
+  }
+
+  &-image {
+    width: 100%;
+    object-fit: cover;
+    margin-right: 0;
+    display: none;
+
+    @media (min-width: $breakpoint-md) {
+      display: block;
     }
   }
 }
