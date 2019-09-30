@@ -7,6 +7,5 @@
 // components
 @import "components/*";
 
-// css framework skeleton
-@import "skeleton/normalize";
-@import "skeleton/skeleton";
+// boostrap grid system only
+@import "bootstrap/bootstrap-grid";
