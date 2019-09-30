@@ -2,13 +2,14 @@
 
   padding-top: 4rem;
   padding-bottom: 4rem;
+  width: 100%;
 
-  @media (min-width: 750px) {
+  @media (min-width: $breakpoint-md) {
     padding-top: 6rem;
     padding-bottom: 6rem;
   }
 
-  @media (min-width: 1000px) {
+  @media (min-width: $breakpoint-lg) {
     padding-top: 8rem;
     padding-bottom: 8rem;
   }
@@ -37,7 +38,7 @@
     background-color: $rainforest-blue-tint2;
     color: $white;
 
-    @media (min-width: 550px) {
+    @media (min-width: $breakpoint-md) {
       background: linear-gradient(to right,
         $rainforest-blue-tint2 0%,
         $rainforest-blue-tint2 50%,
@@ -51,23 +52,9 @@
       color: $white;
       opacity: 0.9;
 
-      @media (min-width: 550px) {
+      @media (min-width: $breakpoint-md) {
         color: $grey1;
         opacity: 1;
-      }
-
-      @media (min-width: 1000px) {
-        padding-left: 2rem;
-      }
-
-      @media (min-width: 1200px) {
-        padding-left: 5rem;
-      }
-    }
-
-    &--twoColorsLeft {
-      @media (min-width: 1000px) {
-        padding-right: 2rem;
       }
     }
   }

@@ -11,12 +11,12 @@
 <div class="Section Section--lagoon">
   <div class="container">
     <div class="row">
-      <div class="col-12 col-md-8 offset-md-1">
+      <div class="col-md-8 offset-md-1">
         <p class="Base-subtitle">
           La façon dont nous utilisons notre argent définit le monde dans lequel nous voulons vivre.
         </p>
       </div>
-      <div class="col-12 col-md-10 offset-md-1">
+      <div class="col-md-10 offset-md-1">
         <h2 class="Base-title2">
           Nous sommes un fond d’investissement à but non lucratif qui crée, rachète et finance des entreprises
           luttant à l’échelle mondiale contre le changement climatique.
@@ -26,34 +26,36 @@
   </div>
 </div>
 
-<div class="row Section Section--twoColors">
+<div class="Section Section--twoColors">
   <div class="container">
-    <div class="col-12 col-md-6 Section-text--twoColorsLeft">
-      <p class="Base-subtitle">
-        Les petits gestes ne suffisent pas.
-      </p>
-      <h2 class="Base-title2">
-        Nous rassemblons de l’argent et des équipes d’entrepreneurs pour créer des entreprises visant
-        la sauvegarde de l’humanité.
-      </h2>
-    </div>
-    <div class="col-12 col-md-6 Section-text--twoColorsRight">
-      <h3 class="Base-title3">des solutions</h3>
-      <p class=Base-text>
-        Afin de lutter contre le réchauffement climatique des solutions nouvelles ou déjà existantes
-        doivent être déployées rapidement et massivement afin d'avoir un réel impact.
-      </p>
+    <div class="row">
+      <div class="col-md-5 Section-text--twoColorsLeft">
+        <p class="Base-subtitle">
+          Les petits gestes ne suffisent pas.
+        </p>
+        <h2 class="Base-title2">
+          Nous rassemblons de l’argent et des équipes d’entrepreneurs pour créer des entreprises visant
+          la sauvegarde de l’humanité.
+        </h2>
+      </div>
+      <div class="col-md-4 offset-md-2 Section-text--twoColorsRight">
+        <h3 class="Base-title3">des solutions</h3>
+        <p class=Base-text>
+          Afin de lutter contre le réchauffement climatique des solutions nouvelles ou déjà existantes
+          doivent être déployées rapidement et massivement afin d'avoir un réel impact.
+        </p>
 
-      <h3 class="Base-title3">des entrepreneurs</h3>
-      <p class=Base-text>
-        La mission première des créateurs d’entreprise ne doit plus être de s’enrichir :
-        leur énergie doit être consacrée à la sauvegarde de la civilisation humaine.
-      </p>
+        <h3 class="Base-title3">des entrepreneurs</h3>
+        <p class=Base-text>
+          La mission première des créateurs d’entreprise ne doit plus être de s’enrichir :
+          leur énergie doit être consacrée à la sauvegarde de la civilisation humaine.
+        </p>
 
-      <h3 class="Base-title3">de l'argent</h3>
-      <p class=Base-text>
-        Nous investissons dans les entreprises capables de réduire l'impact de l'humanité sur le climat.
-      </p>
+        <h3 class="Base-title3">de l'argent</h3>
+        <p class=Base-text>
+          Nous investissons dans les entreprises capables de réduire l'impact de l'humanité sur le climat.
+        </p>
+      </div>
     </div>
   </div>
 </div>
@@ -61,23 +63,19 @@
 <div class="Section Section--lightGrey">
   <div class="container">
     <div class="row">
-      <div class="eight columns">
+      <div class="col-md-10">
         <p class="Base-subtitle">
           Sans changement radical, économique et technologique à l’échelle mondiale, notre civilisation va s'éteindre.
         </p>
       </div>
     </div>
-    <div class="row">
-      <div class="eleven columns">
-        <h2 class="Base-title2">
-          Nous avons besoin d’entreprises ambitieuses à impact mondial.
-          Voici quelques unes des entreprises que nous allons créer :
-        </h2>
-      </div>
-    </div>
+    <h2 class="Base-title2">
+      Nous avons besoin d’entreprises ambitieuses à impact mondial.
+      Voici quelques unes des entreprises que nous allons créer :
+    </h2>
 
     <div class="row">
-      <div class="four columns">
+      <div class="col-md-6 col-lg-4">
         <%= render partial: "picture_card", locals: {
           title: "Mankind Energy",
           text: "Système de stockage de l’électricité sans métal, pour une alternative définitive au pétrole et
@@ -85,7 +83,7 @@
         } %>
       </div>
 
-      <div class="four columns">
+      <div class="col-md-6 col-lg-4">
         <%= render partial: "picture_card", locals: {
           title: "Carbon Capture",
           text: "Usine de transformation du CO2 en hydrogène, pour cesser immédiatement les émissions
@@ -93,17 +91,15 @@
         } %>
       </div>
 
-      <div class="four columns">
+      <div class="col-md-6 col-lg-4">
         <%= render partial: "picture_card", locals: {
           title: "DNA Storage",
           text: "Enregistrer les données informatiques sur de l’ADN de synthèse, pour stocker l’ensemble des données
                 du monde avec presque 0 émissions de CO2."
         } %>
       </div>
-    </div>
-    <div class="row">
 
-      <div class="four columns">
+      <div class="col-md-6 col-lg-4">
         <%= render partial: "picture_card", locals: {
           title: "TP Bank",
           text: "Banque dédiée à la stabilité du système financier, qui garantie une utilisation sécurisée,
@@ -111,7 +107,7 @@
         } %>
       </div>
 
-      <div class="four columns">
+      <div class="col-md-6 col-lg-4">
         <%= render partial: "picture_card", locals: {
           title: "Liv’In",
           text: "Technologie de construction en impression 3D du gros-oeuvre de bâtiments à base de matériaux 100M% naturels."
