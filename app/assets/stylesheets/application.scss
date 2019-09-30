@@ -1,11 +1,15 @@
+/*
+//= require material_icons
+*/
+
 // graphical variables
 @import "config/*";
 
-// layouts
 @import "layouts/*";
 
-// components
 @import "components/*";
+
+@import "pages/*";
 
 // boostrap grid system only
 @import "bootstrap/bootstrap-grid";

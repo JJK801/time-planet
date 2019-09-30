@@ -1,0 +1,24 @@
+.pages-home {
+
+  .Hero {
+    // position: relative;
+    min-height: 100vh;
+    background-image: image-url("earth-globe-planet-45208.jpg");
+    background-repeat: no-repeat;
+    background-position: bottom -14rem right -15rem;
+
+    @media (min-width: $breakpoint-md) {
+      background-position: bottom right -5rem;
+    }
+
+    &-image {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+    }
+
+    &-title {
+      text-shadow: 3px 4px 4px rgba(0, 0, 0, 0.05);
+    }
+  }
+}

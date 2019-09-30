@@ -1,0 +1,51 @@
+.Navbar {
+  background-color: $black;
+  color: $white;
+  height: 96px;
+  display: flex;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+
+  &-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  &-logoContainer {
+    font-size: 2rem;
+    font-family: Gilroy;
+    font-weight: 200;
+    display: flex;
+    align-items: center;
+
+  }
+
+  &-logo {
+    height: 36px;
+    width: 36px;
+    margin-right: 1.25rem;
+  }
+
+  &-cta {
+    font-size: 1.25rem;
+    font-family: Gilroy;
+    font-weight: 800;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+    border-bottom: solid $white 3px;
+    display: flex;
+
+    .material-icons {
+      margin-left: 0.5rem;
+    }
+  }
+}

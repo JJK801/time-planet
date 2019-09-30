@@ -17,6 +17,12 @@
   &--black {
     background-color: $black;
     color: $white;
+
+    em {
+      color: $black;
+      background-color: $white;
+      font-style: normal;
+    }
   }
 
   &--lagoon {

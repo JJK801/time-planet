@@ -10,7 +10,7 @@
     <%= stylesheet_pack_tag 'application', 'data-turbolinks-track': 'reload', async: true %>
   </head>
 
-  <body class="Base">
+  <body class="Base <%= body_class %>">
     <%= yield %>
   </body>
 </html>
