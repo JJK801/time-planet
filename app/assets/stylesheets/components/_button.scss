@@ -20,5 +20,10 @@
       margin-left: 0.5rem;
     }
 
+    &:hover {
+      color: $lagoon-blue;
+      border-color: $lagoon-blue;
+    }
+
   }
 }
