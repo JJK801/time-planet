@@ -11,6 +11,10 @@
       background-position: bottom right -5rem;
     }
 
+    @media (min-width: $breakpoint-xl) {
+      background-size: 50%;
+    }
+
     &-image {
       position: absolute;
       bottom: 0;
@@ -19,6 +23,13 @@
 
     &-title {
       text-shadow: 3px 4px 4px rgba(0, 0, 0, 0.05);
+    }
+
+    &-scrollArrow {
+      position: absolute;
+      bottom: 1rem;
+      font-size: 4rem;
+      color: $lagoon-blue;
     }
   }
 }

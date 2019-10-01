@@ -1,15 +1,20 @@
 .Button {
 
   &--underlined {
-    font-size: 1.25rem;
+    font-size: 0.8rem;
     font-family: Gilroy;
     font-weight: 800;
     letter-spacing: 0.02em;
     text-transform: uppercase;
     border-bottom: solid $white 3px;
     display: inline-flex;
+    align-items: center;
     color: inherit;
     text-decoration: none;
+
+    @media (min-width: $breakpoint-sm) {
+      font-size: 1.25rem;
+    }
 
     .material-icons {
       margin-left: 0.5rem;

@@ -1,13 +1,17 @@
 .Navbar {
   background-color: $black;
   color: $white;
-  height: 96px;
+  height: 4rem;
   display: flex;
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
   z-index: 1;
+
+  @media (min-width: $breakpoint-md) {
+    height: 4.5rem;
+  }
 
   &-container {
     display: flex;
@@ -21,17 +25,26 @@
   }
 
   &-logoContainer {
-    font-size: 2rem;
+    font-size: 1rem;
     font-family: Gilroy;
     font-weight: 200;
     display: flex;
     align-items: center;
 
+    @media (min-width: $breakpoint-md) {
+      font-size: 2rem;
+    }
+
   }
 
   &-logo {
-    height: 36px;
-    width: 36px;
+    height: 1.5rem;
+    width: 1.5rem;
     margin-right: 1.25rem;
+
+    @media (min-width: $breakpoint-md) {
+      height: 2.25rem;
+      width: 2.25rem;
+    }
   }
 }
