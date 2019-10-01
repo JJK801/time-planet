@@ -21,13 +21,17 @@
     em {
       color: $black;
       background-color: $white;
-      font-style: normal;
     }
   }
 
   &--lagoon {
     background-color: $lagoon-blue;
     color: $planet-black;
+
+    em {
+      color: $lagoon-blue;
+      background-color: $planet-black;
+    }
   }
 
   &--lightGrey {
@@ -45,6 +49,11 @@
     color: $planet-black;
   }
 
+  &--darkGreen {
+    background-color: $rainforest-blue-tint2;
+    color: $white;
+  }
+
   &--twoColors {
     background-color: $rainforest-blue-tint2;
     color: $white;
@@ -56,6 +65,12 @@
         $white 50%,
         $white 100%);
     }
+  }
+
+  em {
+    font-style: normal;
+    padding-right: 0.25rem;
+    padding-left: 0.25rem;
   }
 
   &-imageBackground {

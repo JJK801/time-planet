@@ -34,18 +34,4 @@
     width: 36px;
     margin-right: 1.25rem;
   }
-
-  &-cta {
-    font-size: 1.25rem;
-    font-family: Gilroy;
-    font-weight: 800;
-    letter-spacing: 0.02em;
-    text-transform: uppercase;
-    border-bottom: solid $white 3px;
-    display: flex;
-
-    .material-icons {
-      margin-left: 0.5rem;
-    }
-  }
 }
