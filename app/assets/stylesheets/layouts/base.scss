@@ -3,10 +3,7 @@
   margin: 0;
 
   &-title1 {
-    font-family: $headers-font;
-    font-weight: 800;
     font-size: 2rem;
-    letter-spacing: 0.005rem;
 
     @media (min-width: 750px) {
       font-size: 2.5rem;
@@ -18,10 +15,7 @@
   }
 
   &-title2 {
-    font-family: $headers-font;
-    font-weight: 800;
     font-size: 1.75rem;
-    letter-spacing: 0.005rem;
 
     @media (min-width:750px) {
       font-size: 2rem;
@@ -33,11 +27,8 @@
   }
 
   &-title3 {
-    font-family: $headers-font;
-    font-weight: 800;
     font-size: 1.5rem;
     margin-bottom: 0.5rem;
-    letter-spacing: 0.005rem;
 
     @media (min-width:750px) {
       font-size: 1.75rem;
@@ -63,12 +54,10 @@
   }
 
   &-text {
-    font-family: $body-font;
-    font-weight: normal;
-    font-size: 1rem;
 
-    @media (min-width: $breakpoint-lg) {
-      font-size: 1.125rem;
+    &--bigger {
+      font-size: 1.2rem;
+      font-weight: 200;
     }
 
     &--withSeparator {
