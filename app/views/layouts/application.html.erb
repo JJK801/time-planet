@@ -11,6 +11,10 @@
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+
+    <title><%= yield(:meta_title) %> | Time for the Planet</title>
+    <meta name="description" content="<%= yield(:meta_desc) %>" />
+    <meta name="title" content="<%= yield(:meta_title) %> | Time for the Planet" />
   </head>
 
   <body class="Base <%= body_class %>">

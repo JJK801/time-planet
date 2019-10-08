@@ -1,5 +1,10 @@
 <%= render 'shared/navbar' %>
 
+<% content_for :meta_title, "L'entrepreneuriat au service de l'urgence climatique." %>
+<% content_for :meta_desc,
+  "Nous sommes un fond d’investissement à but non lucratif qui crée, rachète et finance des entreprises
+  luttant à l’échelle mondiale contre le changement climatique. Rejoignez-nous !" %>
+
 <div class="Section Section--black Hero">
   <div class="container">
     <div class="row">
@@ -91,6 +96,7 @@
     <div class="row">
       <div class="col-md-6 col-lg-4">
         <%= render partial: "picture_card", locals: {
+          image: 'stockage-electricite-par-gravite.jpg',
           title: "Mankind Energy",
           text: "Système de stockage de l’électricité sans métal, pour une alternative définitive au pétrole et
                 à toutes les énergies non renouvelables."
@@ -99,6 +105,7 @@
 
       <div class="col-md-6 col-lg-4">
         <%= render partial: "picture_card", locals: {
+          image: 'dirigeable-capture-co2.png',
           title: "Carbon Capture",
           text: "Ballons dirigeables placés au dessus des grandes villes pour capturer le CO2 avant qu’il
                 ne se disperse dans l'atmosphère."
@@ -107,6 +114,7 @@
 
       <div class="col-md-6 col-lg-4">
         <%= render partial: "picture_card", locals: {
+          image: 'stockage-adn.jpg',
           title: "DNA Storage",
           text: "Enregistrer les données informatiques sur de l’ADN de synthèse, pour stocker l’ensemble des données
                 du monde avec très peu d'utilisation d'énergie."
@@ -115,6 +123,7 @@
 
       <div class="col-md-6 col-lg-4">
         <%= render partial: "picture_card", locals: {
+          image: 'banque-ethique.jpg',
           title: "TP Bank",
           text: "Banque dédiée à la stabilité du système financier, qui garantie une utilisation sécurisée,
                 rationnelle et éthique de l’argent de ses clients."
@@ -123,6 +132,7 @@
 
       <div class="col-md-6 col-lg-4">
         <%= render partial: "picture_card", locals: {
+          image: 'maison-impression-3D.jpg',
           title: "Liv’In",
           text: "Technologie de construction en impression 3D du gros-oeuvre de bâtiments à base de matériaux 100% naturels."
         } %>
@@ -130,6 +140,7 @@
 
       <div class="col-md-6 col-lg-4">
         <%= render partial: "picture_card", locals: {
+          image: 'climatisation-sans-electricite.jpg',
           title: "Clim’Planet",
           text: "Climatisation fonctionnant sans électricité."
         } %>
