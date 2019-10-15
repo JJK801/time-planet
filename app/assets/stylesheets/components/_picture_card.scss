@@ -9,6 +9,7 @@
 
   @media (min-width:$breakpoint-md) {
     grid-template-rows: 10rem 15rem;
+    max-height: none;
     margin-bottom: 2rem;
   }
 
