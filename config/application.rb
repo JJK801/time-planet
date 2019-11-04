@@ -13,6 +13,18 @@ module TimePlanet
 
     config.active_job.queue_adapter = :sidekiq
 
+    config.generators do |g|
+      g.test_framework :rspec, fixture: true
+      g.fixture_replacement :factory_bot, dir: 'spec/factories'
+      g.view_specs        false
+      g.controller_specs  false
+      g.helper_specs      false
+      g.helper            false
+      g.assets            false
+      g.stylesheets       false
+      g.javascripts       false
+    end
+
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration can go into files in config/initializers
     # -- all .rb files in that directory are automatically loaded after loading

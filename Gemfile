@@ -39,11 +39,12 @@ group :development, :test do
 end
 
 group :development do
-  # Access an interactive console on exception pages or by calling 'console' anywhere in the code.
-  gem 'web-console', '>= 3.3.0'
+  gem 'factory_bot_rails', '~> 4.11'
   gem 'listen', '>= 3.0.5', '< 3.2'
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
+  # Access an interactive console on exception pages or by calling 'console' anywhere in the code.
+  gem 'web-console', '>= 3.3.0'
 end
 
 group :test do
