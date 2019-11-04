@@ -7,7 +7,7 @@ gem 'rails', '~> 5.2.3'
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.1.0', require: false
-gem "flutie"
+gem 'flutie'
 gem 'jbuilder', '~> 2.5'
 gem 'material_icons'
 gem 'pg', '>= 0.18', '< 2.0'
@@ -48,6 +48,7 @@ end
 
 group :test do
   gem 'capybara', '>= 2.15'
+  gem 'rspec_junit_formatter'
   gem 'selenium-webdriver'
   gem 'webdrivers'
 end
