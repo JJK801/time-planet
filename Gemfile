@@ -33,13 +33,15 @@ gem 'webpacker'
 # gem 'capistrano-rails', group: :development
 
 group :development, :test do
+  gem 'awesome_print'
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
+  gem 'dotenv-rails'
+  gem 'factory_bot_rails', '~> 4.11'
   gem 'rspec-rails', '~> 3.8'
 end
 
 group :development do
-  gem 'factory_bot_rails', '~> 4.11'
   gem 'listen', '>= 3.0.5', '< 3.2'
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
@@ -49,9 +51,11 @@ end
 
 group :test do
   gem 'capybara', '>= 2.15'
+  gem 'database_cleaner'
   gem 'rspec_junit_formatter'
   gem 'selenium-webdriver'
   gem 'webdrivers'
+  gem 'webmock'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
