@@ -3,8 +3,11 @@ Rails.application.routes.draw do
 
   root 'pages#home'
 
+  post '/webhooks/prismic', to: 'webhooks#prismic'
+
   # TODO: Find another way to protect this route than admin user
   # require "sidekiq/web"
+  # mount Sidekiq::Web => '/sidekiq'
   # authenticate :user, lambda { |u| u.admin } do
   #   mount Sidekiq::Web => '/sidekiq'
   # end

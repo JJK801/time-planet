@@ -1,0 +1,164 @@
+{
+  "page": 1,
+  "results_per_page": 50,
+  "results_size": 1,
+  "total_results_size": 1,
+  "total_pages": 1,
+  "next_page": null,
+  "prev_page": null,
+  "results": [{
+    "id": "fake_prismic_id",
+    "uid": "fake-slug",
+    "type": "projets",
+    "href": "http://time-planet.cdn.prismic.io/api/v1/documents/search?ref=XcVH7BEAACIA9RcI&q=%5B%5B%3Ad+%3D+at%28document.id%2C+%22XcBX5hEAACAAo25g%22%29+%5D%5D",
+    "tags": [],
+    "first_publication_date": "2019-11-05T13:03:35+0000",
+    "last_publication_date": "2019-11-08T10:47:42+0000",
+    "slugs": ["naissance-du-projet"],
+    "linked_documents": [],
+    "lang": "fr-fr",
+    "alternate_languages": [],
+    "data": {
+      "projets": {
+        "title": {
+          "type": "Text",
+          "value": "Mon CDI"
+        },
+        "project_url": {
+          "type": "Text",
+          "value": "https://www.mon-cdi.fr"
+        },
+        "funding_status": {
+          "type": "Select",
+          "value": "funding"
+        },
+        "long_summary": {
+          "type": "Text",
+          "value": "A long summary"
+        },
+        "short_summary": {
+          "type": "Text",
+          "value": "A short summary"
+        },
+        "description": {
+          "type": "StructuredText",
+          "value": [{
+            "type": "heading1",
+            "text": "Naissance du projet",
+            "spans": []
+          }, {
+            "type": "paragraph",
+            "text": "Lorem ipsum",
+            "spans": []
+          }]
+        },
+        "quote": {
+          "type": "Text",
+          "value": "Vive le CDI"
+        },
+        "cover_image": {
+          "type": "Image",
+          "value": {
+            "main": {
+              "dimensions": {
+                "width": 1249,
+                "height": 645
+              },
+              "alt": "Alternative text of cover image",
+              "copyright": null,
+              "url": "https://fake-url"
+            },
+            "views": {}
+          }
+        },
+        "secondary_image_1": {
+          "type": "Image",
+          "value": {
+            "main": {
+              "dimensions": {
+                "width": 1365,
+                "height": 660
+              },
+              "alt": null,
+              "copyright": null,
+              "url": "https://images.prismic.io/time-planet/9d721780-9f8a-4d2d-a029-b1c05354d6ae_ingenieur-au-travail-page-presse.jpg?auto=compress,format"
+            },
+            "views": {}
+          }
+        },
+        "secondary_image_2": {
+          "type": "Image",
+          "value": {
+            "main": {
+              "dimensions": {
+                "width": 963,
+                "height": 764
+              },
+              "alt": null,
+              "copyright": null,
+              "url": "https://images.prismic.io/time-planet/138aa6fa-e147-4a43-91f0-f616f6921643_philippe-et-valerie-bazin.jpg?auto=compress,format"
+            },
+            "views": {}
+          }
+        },
+        "project_logo": {
+          "type": "Image",
+          "value": {
+            "main": {
+              "dimensions": {
+                "width": 45,
+                "height": 40
+              },
+              "alt": null,
+              "copyright": null,
+              "url": "https://images.prismic.io/time-planet/5b014865-4db4-440d-ba50-51de947a48cb_logo-mon-cdi.svg?auto=compress,format"
+            },
+            "views": {}
+          }
+        },
+        "keyword_1": {
+          "type": "Text",
+          "value": "Social"
+        },
+        "icon_1": {
+          "type": "Text",
+          "value": "thumb_up_alt"
+        },
+        "keyword_2": {
+          "type": "Text",
+          "value": "Cool"
+        },
+        "icon_2": {
+          "type": "Text",
+          "value": "cool_icon"
+        },
+        "keyword_3": {
+          "type": "Text",
+          "value": "Nice"
+        },
+        "icon_3": {
+          "type": "Text",
+          "value": "nice_icon"
+        },
+        "keyword_4": {
+          "type": "Text",
+          "value": "utile"
+        },
+        "icon_4": {
+          "type": "Text",
+          "value": "useful_icon"
+        },
+        "meta_title": {
+          "type": "Text",
+          "value": "La déprécarisation des personnes en intérim ou en CDD"
+        },
+        "meta_description": {
+          "type": "Text",
+          "value": "Fake meta description"
+        }
+      }
+    }
+  }],
+  "version": "aa1901d",
+  "license": "All Rights Reserved"
+}
