@@ -28,9 +28,9 @@ class UpdatePrismicContentsJob < ApplicationJob
       @received_ids.push(prismic_content.prismic_id)
       project_from_db = @model.find_by(prismic_id: prismic_content.prismic_id)
       if project_from_db
-        project_from_db.update(map_to_content(prismic_content))
+        project_from_db.update(prismic_content.to_hash)
       else
-        @model.create(map_to_content(prismic_content))
+        @model.create(prismic_content.to_hash)
       end
     end
   end
@@ -45,13 +45,5 @@ class UpdatePrismicContentsJob < ApplicationJob
 
   def article_unpublished_from_prismic?(prismic_id)
     !@received_ids.include? prismic_id
-  end
-
-  def map_to_content(prismic_content)
-    Hash[
-      "Prismic::#{@model.name}".constantize.attributes.map do |attribute|
-        [attribute, prismic_content.public_send(attribute)]
-      end.push([:published, true])
-    ]
   end
 end

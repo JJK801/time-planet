@@ -13,7 +13,7 @@ module Prismic
         { "page" => page_number, "pageSize" => 50 }
       )
       response.results = response.results.map do |project|
-        Prismic::Project.new(project)
+        Prismic::ProjectSerializer.new(project)
       end
       response
     end
@@ -24,7 +24,7 @@ module Prismic
         { "page" => page_number, "pageSize" => 50 }
       )
       response.results = response.results.map do |entrepreneur|
-        Prismic::Entrepreneur.new(entrepreneur)
+        Prismic::EntrepreneurSerializer.new(entrepreneur)
       end
       response
     end
