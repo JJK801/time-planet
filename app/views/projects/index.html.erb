@@ -28,7 +28,6 @@
     </div>
     <div class="row ProjectList">
       <% @projects.map do |project| %>
-<!--        Rajouter lien sur les cards, faire pareil sur la home ?-->
         <div class="col-md-6 col-lg-4">
           <%= render partial: 'shared/picture_card', locals: {
               picture_url: project.cover_image_url,

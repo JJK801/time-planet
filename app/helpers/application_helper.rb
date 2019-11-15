@@ -12,7 +12,7 @@ module ApplicationHelper
 
   def get_host_without_www(url)
     return if url.blank?
-    # TODO: Test this shit
+    # TODO: Test this
 
     uri = URI.parse(url)
     uri = URI.parse("http://#{url}") if uri.scheme.nil?
