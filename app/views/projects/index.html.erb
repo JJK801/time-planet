@@ -18,7 +18,7 @@
           <img src="<%= @highlighted_project.project_logo_url %>"
                alt="<%= @highlighted_project.project_logo_alt %>"
                class="PictureCard-logo">
-          <div class="PictureCard-card">
+          <div class="PictureCard-content">
             <h3 class="PictureCard-title PictureCard-title--bigger"><%= @highlighted_project.title %></h3>
             <p class="PictureCard-text"><%= @highlighted_project.long_summary %>
             </p>
@@ -30,6 +30,7 @@
       <% @projects.map do |project| %>
         <div class="col-md-6 col-lg-4">
           <%= render partial: 'shared/picture_card', locals: {
+              href: project_path(project.slug),
               picture_url: project.cover_image_url,
               picture_alt: project.cover_image_alt,
               title: project.title,

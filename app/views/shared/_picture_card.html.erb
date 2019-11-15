@@ -1,8 +1,16 @@
-<div class="PictureCard">
+<% if href.blank? %>
+  <div class="PictureCard">
+<% else %>
+  <a class="PictureCard" href="<%= href %>">
+<% end %>
   <img src="<%= picture_url %>" alt="<%= picture_alt %>" class="PictureCard-image">
-  <div class="PictureCard-card">
+  <div class="PictureCard-content">
     <h3 class="PictureCard-title"><%= title %></h3>
     <p class="PictureCard-text"><%= text %>
     </p>
   </div>
-</div>
+<% if href.blank? %>
+  </div>
+<% else %>
+  </a>
+<% end %>

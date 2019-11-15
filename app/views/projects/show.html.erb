@@ -72,7 +72,7 @@
                 <img src="<%= entrepreneur.picture_url %>"
                      alt="<%= entrepreneur.picture_alt %>"
                      class="PictureCard-image">
-                <div class="PictureCard-card PictureCard-card--white">
+                <div class="PictureCard-content PictureCard-content--white">
                   <h4 class="PictureCard-title PictureCard-title--downcase">
                     <strong><%= entrepreneur.name %></strong> | <%= entrepreneur.position %>
                   </h4>
@@ -98,6 +98,7 @@
       <% @recent_projects.each do |project| %>
         <div class="col-md-6 col-lg-3">
           <%= render partial: 'shared/picture_card', locals: {
+              href: project_path(project.slug),
               picture_url: project.cover_image_url,
               picture_alt: project.cover_image_alt,
               title: project.title,
