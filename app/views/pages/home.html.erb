@@ -1,5 +1,3 @@
-<%= render 'shared/navbar' %>
-
 <% content_for :meta_title, "L'entrepreneuriat au service de l'urgence climatique." %>
 <% content_for :meta_desc,
   "Nous sommes une société à but non lucratif qui crée et finance des entreprises
@@ -94,8 +92,9 @@
 
     <div class="row">
       <div class="col-md-6 col-lg-4">
-        <%= render partial: "picture_card", locals: {
-          image: 'stockage-electricite-par-gravite.jpg',
+        <%= render partial: 'shared/picture_card', locals: {
+          picture_url: image_path('stockage-electricite-par-gravite.jpg'),
+          picture_alt: 'Stockage électricité par gravité',
           title: "Mankind Energy",
           text: "Système de stockage de l’électricité sans métal, pour une alternative définitive au pétrole et
                 à toutes les énergies non renouvelables."
@@ -103,8 +102,9 @@
       </div>
 
       <div class="col-md-6 col-lg-4">
-        <%= render partial: "picture_card", locals: {
-          image: 'dirigeable-capture-co2.png',
+        <%= render partial: 'shared/picture_card', locals: {
+          picture_url: image_path('dirigeable-capture-co2.png'),
+          picture_alt: 'Dirigeable capture CO2',
           title: "Carbon Capture",
           text: "Ballons dirigeables placés au dessus des grandes villes pour capturer le CO2 avant qu’il
                 ne se disperse dans l'atmosphère."
@@ -112,8 +112,9 @@
       </div>
 
       <div class="col-md-6 col-lg-4">
-        <%= render partial: "picture_card", locals: {
-          image: 'stockage-adn.jpg',
+        <%= render partial: 'shared/picture_card', locals: {
+          picture_url: image_path('stockage-adn.jpg'),
+          picture_alt: 'Stockage de données sur ADN',
           title: "DNA Storage",
           text: "Enregistrer les données informatiques sur de l’ADN de synthèse, pour stocker l’ensemble des données
                 du monde avec très peu d'utilisation d'énergie."
@@ -121,8 +122,9 @@
       </div>
 
       <div class="col-md-6 col-lg-4">
-        <%= render partial: "picture_card", locals: {
-          image: 'banque-ethique.jpg',
+        <%= render partial: 'shared/picture_card', locals: {
+          picture_url: image_path('banque-ethique.jpg'),
+          picture_alt: 'Banque éthique',
           title: "TP Bank",
           text: "Banque dédiée à la stabilité du système financier, qui garantie une utilisation sécurisée,
                 rationnelle et éthique de l’argent de ses clients."
@@ -130,16 +132,18 @@
       </div>
 
       <div class="col-md-6 col-lg-4">
-        <%= render partial: "picture_card", locals: {
-          image: 'maison-impression-3D.jpg',
+        <%= render partial: 'shared/picture_card', locals: {
+          picture_url: image_path('maison-impression-3D.jpg'),
+          picture_alt: 'Maison impression 3D',
           title: "Liv’In",
           text: "Technologie de construction en impression 3D du gros-oeuvre de bâtiments à base de matériaux 100% naturels."
         } %>
       </div>
 
       <div class="col-md-6 col-lg-4">
-        <%= render partial: "picture_card", locals: {
-          image: 'climatisation-sans-electricite.jpg',
+        <%= render partial: 'shared/picture_card', locals: {
+          picture_url: image_path('climatisation-sans-electricite.jpg'),
+          picture_alt: 'Climatisation sans électricité',
           title: "Clim’Planet",
           text: "Climatisation fonctionnant sans électricité."
         } %>
@@ -205,7 +209,7 @@
       <div class="col-md-10">
         <a href="https://automate-me.typeform.com/to/GWwIx3"
            data-mode="popup"
-           class="Button--underlined typeform-share"
+           class="Button Button--underlined typeform-share"
            target="_blank">
           Contacter Time for the Planet <i class="material-icons">arrow_forward</i>
         </a>
@@ -238,7 +242,5 @@
     </div>
   </div>
 </div>
-
-<%= render 'shared/footer' %>
 
 <script> (function() { var qs,js,q,s,d=document, gi=d.getElementById, ce=d.createElement, gt=d.getElementsByTagName, id="typef_orm_share", b="https://embed.typeform.com/"; if(!gi.call(d,id)){ js=ce.call(d,"script"); js.id=id; js.src=b+"embed.js"; q=gt.call(d,"script")[0]; q.parentNode.insertBefore(js,q) } })() </script>

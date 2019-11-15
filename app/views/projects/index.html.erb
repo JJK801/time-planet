@@ -1,0 +1,43 @@
+<div class="Section Section--white">
+  <div class="container">
+    <div class="row ">
+      <div class="col-md-5">
+        <h1 class="Base-title1">Nos projets</h1>
+        <p class="Base-subtitle Base-subtitle--smaller">
+          Nous réunissons 1 milliard d’euros pour créer 100 entreprises luttant contre le dérèglement climatique.
+        </p>
+        <p class="Base-subtitle Base-subtitle--smaller">
+          Découvrez tous nos projets financés ou en cours de financement.
+        </p>
+      </div>
+      <div class="col-md-6 offset-md-1">
+        <div class="PictureCard">
+          <img src="<%= @highlighted_project.cover_image_url %>"
+               alt="<%= @highlighted_project.cover_image_alt %>"
+               class="PictureCard-image">
+          <img src="<%= @highlighted_project.project_logo_url %>"
+               alt="<%= @highlighted_project.project_logo_alt %>"
+               class="PictureCard-logo">
+          <div class="PictureCard-card">
+            <h3 class="PictureCard-title PictureCard-title--bigger"><%= @highlighted_project.title %></h3>
+            <p class="PictureCard-text"><%= @highlighted_project.long_summary %>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row ProjectList">
+      <% @projects.map do |project| %>
+<!--        Rajouter lien sur les cards, faire pareil sur la home ?-->
+        <div class="col-md-6 col-lg-4">
+          <%= render partial: 'shared/picture_card', locals: {
+              picture_url: project.cover_image_url,
+              picture_alt: project.cover_image_alt,
+              title: project.title,
+              text: project.short_summary
+          } %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>

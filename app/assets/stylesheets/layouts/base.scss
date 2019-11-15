@@ -50,6 +50,10 @@
 
     @media (min-width: 1000px) {
       font-size: 2rem;
+
+      &--smaller {
+        font-size: 1.75rem;
+      }
     }
   }
 

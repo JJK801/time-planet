@@ -5,6 +5,8 @@ Rails.application.routes.draw do
 
   post '/webhooks/prismic', to: 'webhooks#prismic'
 
+  resources :projects, only: [:index, :show], path: 'projets', param: :slug
+
   # TODO: Find another way to protect this route than admin user
   # require "sidekiq/web"
   # mount Sidekiq::Web => '/sidekiq'

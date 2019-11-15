@@ -1,0 +1,106 @@
+.ProjectHeader {
+  position: relative;
+  background-color: $grey1;
+  color: $white;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 2rem;
+
+  @media (min-width: $breakpoint-lg) {
+    margin-bottom: 0;
+    flex-direction: row;
+  }
+
+  @media (min-width: $breakpoint-md) {
+    margin-bottom: 0;
+  }
+
+  &-imageContainer {
+    flex: 0 0 50%;
+    position: relative;
+  }
+
+  &-image {
+    object-fit: cover;
+    height: 100%;
+  }
+
+  &-header {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: space-between;
+
+    @media (min-width: $breakpoint-sm) {
+      flex-direction: row;
+    }
+  }
+
+  &-link {
+    opacity: 0.8;
+    font-size: 0.8rem;
+    margin-bottom: 2rem;
+    align-self: flex-end;
+
+    @media (min-width: $breakpoint-sm) {
+      margin-bottom: 0;
+    }
+
+    &:hover {
+      opacity: 1;
+      color: inherit;
+    }
+  }
+
+  &-logo {
+    width: 3rem;
+    position: absolute;
+    right: 2rem;
+    bottom: 2rem;
+
+    @media (min-width: $breakpoint-md) {
+      width: 4.5rem;
+      right: 3.75rem;
+      bottom: 2.5rem;
+    }
+  }
+
+  &-content {
+    padding: 2rem 1rem;
+
+    @media (min-width: $breakpoint-sm) {
+      padding: 4rem 3rem;
+    }
+  }
+
+  &-tags {
+    margin-top: 3rem;
+  }
+
+  &-tag {
+    display: inline-flex;
+    align-items: center;
+    font-size: 1rem;
+    font-weight: 300;
+    margin: 0 3.5rem 1.5rem 0;
+
+    i {
+      font-size: 1rem;
+      margin-right: 0.5rem;
+      opacity: 0.8;
+    }
+
+    @media (min-width: $breakpoint-sm) {
+      font-size: 1.25rem;
+
+      i {
+        font-size: 1.25rem;
+      }
+    }
+  }
+
+  &-bottomLink {
+    position: absolute;
+    right: 0;
+    bottom: -2.5rem;
+  }
+}

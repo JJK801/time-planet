@@ -1,0 +1,111 @@
+<div class="Section Section--white HeaderSection">
+  <div class="container ProjectHeaderContainer">
+    <div class="ProjectHeader">
+      <div class="ProjectHeader-imageContainer">
+        <img src="<%= @project.cover_image_url %>" alt="<%= @project.cover_image_alt %>" class="ProjectHeader-image">
+        <img src="<%= @project.project_logo_url %>" alt="<%= @project.project_logo_alt %>" class="ProjectHeader-logo">
+      </div>
+      <div class="ProjectHeader-content">
+        <div class="ProjectHeader-header">
+          <span class="Label"><%= I18n.t(@project.funding_status) %></span>
+          <%= link_to "Visiter #{get_host_without_www(@project.project_url)}",
+                      @project.project_url,
+                      class: 'Button ProjectHeader-link'%>
+        </div>
+        <h1 class="Base-title2"><%= @project.title %></h1>
+        <p class="Base-text"><%= @project.long_summary %></p>
+        <div class="ProjectHeader-tags">
+          <% 4.times do |i| %>
+            <% if @project.public_send("keyword_#{i + 1}").present? && @project.public_send("icon_#{i + 1}").present? %>
+              <span class="ProjectHeader-tag">
+                <i class="material-icons"><%= @project.public_send("icon_#{i + 1}") %></i>
+                <%= @project.public_send("keyword_#{i + 1}") %>
+              </span>
+            <% end %>
+            <% if i == 1 %>
+              <br>
+            <% end %>
+          <% end %>
+        </div>
+      </div>
+      <%= link_to projects_path, class: 'ProjectHeader-bottomLink Button Button--green' do %>
+        Voir plus de projets <i class="material-icons">arrow_forward</i>
+      <% end %>
+    </div>
+  </div>
+</div>
+
+<div class="Section Section--white">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4 order-md-last QuoteContainer">
+        <div class="row">
+          <div class="col-5 col-md-12">
+            <img src="<%= @project.secondary_image_2_url %>"
+                 alt="<%= @project.secondary_image_2_alt %>"
+                 class="Image">
+          </div>
+          <div class="col-7 col-md-12">
+            <p class="Quote">“<%= @project.quote %>”</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-8">
+        <img src="<%= @project.secondary_image_1_url %>" alt="<%= @project.secondary_image_1_alt %>" class="Image">
+        <%= @project.description.html_safe %>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="Section Section--darkGreen">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4">
+        <h2 class="Base-title2 TeamTitle">L'équipe fondatrice de <%= @project.title %></h2>
+      </div>
+      <div class="col-md-8">
+        <div class="row">
+<!--          TODO: Mettre margin bottom sur card ? et réduire taille police titre h2-->
+          <% @project.entrepreneurs.each do |entrepreneur| %>
+            <div class="col-md-5 offset-md-1">
+              <div class="PictureCard">
+                <img src="<%= entrepreneur.picture_url %>"
+                     alt="<%= entrepreneur.picture_alt %>"
+                     class="PictureCard-image">
+                <div class="PictureCard-card PictureCard-card--white">
+                  <h4 class="PictureCard-title PictureCard-title--downcase">
+                    <strong><%= entrepreneur.name %></strong> | <%= entrepreneur.position %>
+                  </h4>
+                  <p class="PictureCard-text"><%= entrepreneur.description %></p>
+                </div>
+              </div>
+            </div>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="Section Section--white">
+  <div class="container">
+    <div class="CarouselHeader">
+      <h3 class="Base-title3">Découvrir plus de projets</h3>
+      <%= link_to projects_path, class: 'Button Button--green' do %>
+        Voir tous les projets <i class="material-icons">arrow_forward</i>
+      <% end %>
+    </div>
+    <div class="row">
+      <% @recent_projects.each do |project| %>
+        <div class="col-md-6 col-lg-3">
+          <%= render partial: 'shared/picture_card', locals: {
+              picture_url: project.cover_image_url,
+              picture_alt: project.cover_image_alt,
+              title: project.title,
+              text: project.short_summary
+          } %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>

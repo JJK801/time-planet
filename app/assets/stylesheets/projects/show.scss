@@ -1,0 +1,63 @@
+.projects-show {
+
+  .HeaderSection {
+    @media (min-width: $breakpoint-md) {
+      padding-bottom: 2rem;
+    }
+  }
+
+  @media (max-width: $breakpoint-sm) {
+    .ProjectHeaderContainer {
+      padding-left: 0;
+      padding-right: 0;
+    }
+
+    .Base-title2 {
+      margin-top: 1.5rem;
+    }
+  }
+
+  .QuoteContainer {
+    @media (max-width: $breakpoint-md) {
+      margin-bottom: 2rem;
+    }
+  }
+
+  .Quote {
+    font-family: $headers-font;
+    font-size: 2rem;
+    font-weight: 800;
+
+    @media (min-width: $breakpoint-md) and (max-width: $breakpoint-lg) {
+      font-size: 1.5rem;
+    }
+  }
+
+  .Image {
+    object-fit: cover;
+    height: 12rem;
+
+    @media (min-width: $breakpoint-md) {
+      height: 16rem;
+    }
+
+    @media (min-width: $breakpoint-lg) {
+      height: 22rem;
+    }
+  }
+
+  .TeamTitle {
+    margin-top: 0;
+  }
+
+  .CarouselHeader {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+
+    .Base-title3 {
+      margin: 0;
+    }
+  }
+}

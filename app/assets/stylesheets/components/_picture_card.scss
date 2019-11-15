@@ -1,5 +1,4 @@
 .PictureCard {
-
   width: 100%;
   display: grid;
   grid-template-columns: repeat(4, 25%);
@@ -26,6 +25,18 @@
     }
   }
 
+  &-logo {
+    visibility: hidden;
+    position: absolute;
+    right: 2rem;
+    top: 3rem;
+    width: 4rem;
+
+    @media (min-width: $breakpoint-md) {
+      visibility: visible;
+    }
+  }
+
   &-card {
     background-color: $grey1;
     color: $white;
@@ -38,6 +49,11 @@
       grid-column: 1 / span 4;
       grid-row: 2 / span 1;
     }
+
+    &--white {
+      background-color: $white;
+      color: $planet-black;
+    }
   }
 
   &-title {
@@ -48,8 +64,17 @@
     letter-spacing: 0.02rem;
     margin-bottom: 1rem;
 
+    &--downcase {
+      text-transform: none;
+      font-weight: 400;
+    }
+
     @media (min-width: $breakpoint-md) {
       font-size: 1.25rem;
+
+      &--bigger {
+        font-size: 2rem;
+      }
     }
   }
 

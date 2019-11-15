@@ -8,11 +8,6 @@
     padding-bottom: 6rem;
   }
 
-  @media (min-width: $breakpoint-lg) {
-    padding-top: 8rem;
-    padding-bottom: 8rem;
-  }
-
   &--black {
     background-color: $black;
     color: $white;
