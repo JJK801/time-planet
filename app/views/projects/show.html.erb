@@ -1,3 +1,6 @@
+<% content_for :meta_title, @project.meta_title %>
+<% content_for :meta_desc, @project.meta_description %>
+
 <div class="Section Section--white HeaderSection">
   <div class="container ProjectHeaderContainer">
     <div class="ProjectHeader">
@@ -10,6 +13,7 @@
           <span class="Label"><%= I18n.t(@project.funding_status) %></span>
           <%= link_to "Visiter #{get_host_without_www(@project.project_url)}",
                       @project.project_url,
+                      target: '_blank',
                       class: 'Button ProjectHeader-link'%>
         </div>
         <h1 class="Base-title2"><%= @project.title %></h1>
@@ -67,8 +71,8 @@
       <div class="col-md-8">
         <div class="row">
           <% @project.entrepreneurs.each do |entrepreneur| %>
-            <div class="col-md-5 offset-md-1">
-              <div class="PictureCard">
+            <div class="col-lg-5 offset-lg-1">
+              <div class="PictureCard PictureCard--lgShift PictureCard--biggerMarginBottom">
                 <img src="<%= entrepreneur.picture_url %>"
                      alt="<%= entrepreneur.picture_alt %>"
                      class="PictureCard-image">
