@@ -11,6 +11,7 @@
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload', async: true %>
 
     <title><%= yield(:meta_title) %> | Time for the Planet</title>
     <meta name="description" content="<%= yield(:meta_desc) %>" />

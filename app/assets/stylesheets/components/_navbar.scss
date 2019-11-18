@@ -1,22 +1,100 @@
 .Navbar {
-  background-color: $black;
+  background-color: transparent;
   color: $white;
-  height: 4rem;
-  display: flex;
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
   z-index: 1;
 
-  @media (min-width: $breakpoint-md) {
-    height: 4.5rem;
+  &-mobileLinks {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    flex-direction: column;
+    align-items: center;
+    display: none;
+
+    .Navbar-link, .Navbar-cta {
+      margin-top: 2rem;
+      margin-right: 0;
+    }
+  }
+
+  &--menuOpen {
+    height: 100vh;
+
+    .Navbar-mobileLinks {
+      display: flex;
+    }
+  }
+
+  &--darkLogo {
+
+    .Navbar-logoContainer {
+      color: $planet-black;
+    }
+  }
+
+  &--darkLinks {
+
+    .Navbar-cta {
+      border-color: $planet-black;
+      color: $planet-black;
+
+      &:hover {
+        color: $lagoon-blue;
+        border-color: $lagoon-blue;
+      }
+    }
+
+    .Navbar-link {
+      color: $grey2;
+
+      &:hover {
+        color: $lagoon-blue;
+      }
+    }
+  }
+
+  &:not(&--darkLinks) {
+    .hamburger-box .hamburger-inner, .hamburger-box .hamburger-inner::after, .hamburger-box .hamburger-inner::before  {
+      background-color: $grey3;
+    }
+  }
+
+  &--black {
+    background-color: $black;
+    color: $white;
+
+    .Navbar-logoContainer, .Navbar-cta {
+      color: $white;
+      border-color: $white;
+    }
+
+    .Navbar-cta:hover {
+      color: $lagoon-blue;
+      border-color: $lagoon-blue;
+    }
+
+    .Navbar-link {
+      color: $grey5;
+    }
+
+    .hamburger-box .hamburger-inner, .hamburger-box .hamburger-inner::after, .hamburger-box .hamburger-inner::before  {
+      background-color: $grey5;
+    }
   }
 
   &-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    height: 4rem;
+
+    @media (min-width: $breakpoint-md) {
+      height: 4.5rem;
+    }
   }
 
   &-logoContainer {
@@ -30,7 +108,6 @@
     @media (min-width: $breakpoint-md) {
       font-size: 2rem;
     }
-
   }
 
   &-logo {
@@ -41,6 +118,29 @@
     @media (min-width: $breakpoint-md) {
       height: 2.25rem;
       width: 2.25rem;
+    }
+  }
+
+  &-links {
+    display: none;
+
+    @media (min-width: $breakpoint-lg) {
+      display: block;
+    }
+  }
+
+  &-link {
+    color: $grey5;
+    margin-right: 4rem;
+
+    &:hover {
+      color: $white;
+    }
+  }
+
+  .Navbar-hamburger {
+    @media (min-width: $breakpoint-lg) {
+      display: none;
     }
   }
 }
