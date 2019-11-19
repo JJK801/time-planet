@@ -1,40 +1,60 @@
-import { Controller } from "stimulus";
+import { Controller } from 'stimulus';
 import {disableBodyScroll, enableBodyScroll, clearAllBodyScrollLocks} from 'body-scroll-lock';
 
 export default class extends Controller {
-  static targets = [ 'main', 'hamburger' ];
+  static targets = [ 'hamburger' ];
 
   connect() {
-    window.onresize = () => {
-      if (window.innerWidth > 990 && this.isMenuOpen()) {
-        clearAllBodyScrollLocks();
-        this.mainTarget.classList.remove('Navbar--menuOpen');
-        this.hamburgerTarget.classList.remove('is-active');
-        if (window.scrollY < 10) {
-          this.mainTarget.classList.remove('Navbar--black');
-        }
+    this.hamburgerActiveClass = 'is-active';
+    this.darkModeClass = 'Navbar--dark';
+    this.menuOpenClass = 'Navbar--menuOpen';
+  }
+
+  closeMenuOnLargeBreakpoint() {
+    if (window.innerWidth > 990 && this.isMenuOpen()) {
+      clearAllBodyScrollLocks();
+      this.element.classList.remove(this.menuOpenClass);
+      this.hamburgerTarget.classList.remove(this.hamburgerActiveClass);
+      if (this.isWindowAtTheTop()) {
+        this.element.classList.remove(this.darkModeClass);
       }
-    };
+    }
+  }
+
+  toggleDarkModeOnScroll() {
+    if (!this.isWindowAtTheTop()) {
+      this.element.classList.add(this.darkModeClass);
+    } else {
+      this.element.classList.remove(this.darkModeClass);
+    }
   }
 
   isMenuOpen() {
-    return this.hamburgerTarget.classList.contains('is-active');
+    return this.hamburgerTarget.classList.contains(this.hamburgerActiveClass);
   }
 
-  openMenu() {
-    const isClosing = this.isMenuOpen();
-    this.hamburgerTarget.classList.toggle('is-active');
-    this.mainTarget.classList.toggle('Navbar--menuOpen');
-    if (!this.mainTarget.classList.contains('Navbar--black')) {
-      this.mainTarget.classList.add('Navbar--black');
+  isWindowAtTheTop() {
+    return window.scrollY < 10;
+  }
+
+  toggleMenu() {
+    const isClosingMenu = this.isMenuOpen();
+    this.hamburgerTarget.classList.toggle(this.hamburgerActiveClass);
+    this.element.classList.toggle(this.menuOpenClass);
+    if (!this.element.classList.contains(this.darkModeClass)) {
+      this.element.classList.add(this.darkModeClass);
     }
-    if (isClosing && window.scrollY < 10) {
-      this.mainTarget.classList.remove('Navbar--black');
+    if (isClosingMenu && this.isWindowAtTheTop()) {
+      this.element.classList.remove(this.darkModeClass);
     }
-    if (!isClosing) {
-      disableBodyScroll(this.mainTarget);
+    this.toggleScrollOnBody(isClosingMenu);
+  }
+
+  toggleScrollOnBody(isClosingMenu) {
+    if (isClosingMenu) {
+      enableBodyScroll(this.element);
     } else {
-      enableBodyScroll(this.mainTarget);
+      disableBodyScroll(this.element);
     }
   }
 }

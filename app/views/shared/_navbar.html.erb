@@ -1,5 +1,7 @@
-<nav class="Navbar <%= yield(:navbar_classes) %>" data-controller="navbar" data-target="navbar.main">
-  <div class="container Navbar-container">
+<nav class="Navbar <%= yield(:navbar_classes) %>"
+     data-controller="navbar"
+     data-action="resize@window->navbar#closeMenuOnLargeBreakpoint">
+  <div class="container Navbar-container" data-action="scroll@window->navbar#toggleDarkModeOnScroll">
     <a href="/" class="Navbar-logoContainer">
       <%= embedded_svg 'logo-time-planet.svg', class: "Navbar-logo" %>
       Time for the Planet
@@ -15,7 +17,7 @@
             aria-label="Menu"
             aria-controls="navigation"
             data-target="navbar.hamburger"
-            data-action="navbar#openMenu">
+            data-action="navbar#toggleMenu">
         <span class="hamburger-box">
           <span class="hamburger-inner"></span>
         </span>
