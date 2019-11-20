@@ -9,7 +9,7 @@ class MessagesController < ApplicationController
 
     if @message.save
       MessageMailer.contact(@message).deliver_now
-      # redirect_to contact_path, notice: 'Votre message a bien été envoyé.'
+      redirect_to contact_path, notice: 'Votre message a bien été envoyé.'
     else
       render :new
     end

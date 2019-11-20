@@ -8,6 +8,8 @@
   align-items: center;
   color: inherit;
   text-decoration: none;
+  transition: all 0.3s;
+  cursor: pointer;
 
   @media (min-width: $breakpoint-sm) {
     font-size: 1.25rem;
@@ -18,6 +20,7 @@
   }
 
   &:hover {
+    transition: all 0.3s;
     color: $lagoon-blue;
     border-color: $lagoon-blue;
   }
@@ -28,5 +31,20 @@
 
   &--green {
     color: $rainforest-blue-tint1;
+  }
+
+  &--greenBox {
+    background-color: $lagoon-blue;
+    color: $planet-black;
+    padding: 1rem 2rem;
+    border-radius: 3px;
+    border: none;
+    transition: background-color 0.3s;
+
+    &:hover {
+      background-color: $lagoon-blue-tint-4;
+      color: $planet-black;
+      transition: background-color 0.3s;
+    }
   }
 }

@@ -8,6 +8,9 @@ Rails.application.routes.draw do
 
   resources :projects, only: [:index, :show], path: 'projets', param: :slug
 
+  get '/contact', to: 'messages#new'
+  post '/contact', to:'messages#create'
+
   # TODO: Find another way to protect this route than admin user
   # require "sidekiq/web"
   # mount Sidekiq::Web => '/sidekiq'

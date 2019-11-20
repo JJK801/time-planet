@@ -28,6 +28,10 @@
 
         gtag('config', 'UA-152644201-1');
     </script>
+
+    <script type="text/javascript">
+      window.I18n = <%= current_translations.to_json.html_safe %>;
+    </script>
   </head>
 
   <body class="Base <%= body_class %>">

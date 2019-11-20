@@ -1,0 +1,72 @@
+.Form {
+
+  &-inlineGroup {
+    display: flex;
+    justify-content: space-between;
+
+    .Form-field {
+      flex: 1;
+      max-width: 50%;
+
+      &:not(:last-child) {
+        margin-right: 1rem;
+      }
+    }
+  }
+
+  &-actions {
+    text-align: right;
+  }
+
+  &-field {
+    margin-bottom: 2rem;
+  }
+
+  &-input {
+    display: block;
+    height: 2.5rem;
+    width: 100%;
+    border-radius: 3px;
+    border: none;
+    padding: 0.75rem 2rem 0.75rem 0.75rem;
+    font-size: 1rem;
+    font-family: $body-font;
+    background-repeat: no-repeat;
+    background-position: 98%;
+    background-color: $rainforest-blue-tint3;
+    color: $white;
+
+    &[type="email"] {
+      max-width: 22rem;
+    }
+
+    &--valid {
+      border: 2px solid $rainforest-blue;
+      background-image: image_url('check_circle-24px.svg');
+    }
+
+    &--invalid {
+      border: 2px solid $red1;
+      background-image: image_url('error_outline-24px.svg');
+    }
+  }
+
+  &-text {
+    min-height: 8rem;
+  }
+
+  &-label {
+    display: inline-block;
+    margin-bottom: 0.25rem;
+    color: $lagoon-blue-tint-3;
+  }
+
+  &-error {
+    color: $red2;
+    font-size: 0.9rem;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    display: block;
+  }
+}

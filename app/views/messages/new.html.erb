@@ -1,0 +1,47 @@
+<div class="Section Section--darkGreen">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6">
+        <p class="Base-subtitle">
+          Une question ?<br>
+          Envie d’entreprendre pour la planète&nbsp;?
+        </p>
+        <h1 class="Base-title1">Contactez-nous !</h1>
+      </div>
+      <div class="col-md-6">
+        <%= simple_form_for @message, url: contact_path, html: { 'data-controller': 'form' } do |f| %>
+          <div class="Form-inlineGroup">
+            <%= f.input :sender_first_name, label: 'Votre prénom', required: true,
+                        input_html: { 'data-action': 'blur->form#validate' } %>
+            <%= f.input :sender_last_name, label: 'Votre nom', required: true,
+                        input_html: { 'data-action': 'blur->form#validate' } %>
+          </div>
+          <%= f.input :sender_email, label: 'Votre email', required: true,
+                      input_html: { 'data-action': 'blur->form#validate' } %>
+          <%= f.input :body, label: 'Votre message', required: true,
+                      input_html: { class: 'Form-text', 'data-action': 'blur->form#validate' } %>
+
+          <div class="Form-actions">
+            <%= f.button :submit, 'Envoyer', class: 'Button--greenBox' %>
+          </div>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="Section Section--lightGrey">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-9 offset-md-1">
+        <p class="Base-subtitle">Nous rencontrer</p>
+        <h2 class="Base-title2">Envie d’échanger ? Rencontrez-nous dans nos locaux à Lyon !</h2>
+        <address class="Base-subtitle Address">
+          Time for the Planet<br>
+          10 rue Mortier 69003<br>
+          Lyon<br>
+        </address>
+      </div>
+    </div>
+  </div>
+</div>
