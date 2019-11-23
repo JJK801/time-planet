@@ -11,7 +11,7 @@ RSpec.describe MessageMailer, type: :mailer do
     end
 
     it "should send the email the right address" do
-      expect(mail.to).to eq(["francois@nada.computer"])
+      expect(mail.to).to eq(["mehdi@time-planet.com"])
     end
 
     it "should be sent from the sender address" do
