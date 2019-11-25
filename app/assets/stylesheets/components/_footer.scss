@@ -1,9 +1,5 @@
 .Footer {
 
-  &-container {
-    display: flex;
-  }
-
   &-logo {
     width: 2.5rem;
     height: 2.5rem;
@@ -39,9 +35,13 @@
     }
   }
 
-  &-back {
-    align-self: flex-start;
-    margin-left: auto;
+  &-brand {
+    display: flex;
+  }
+
+  &-link {
+    color: $lagoon-blue-tint-3;
+    margin-bottom: 1rem;
   }
 
   &-icon {
@@ -51,7 +51,7 @@
 
     &:hover {
       fill: $lagoon-blue;
-      opacitu: 1;
+      opacity: 1;
     }
   }
 }

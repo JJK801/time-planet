@@ -1,16 +1,33 @@
 <footer class="Section Section--darkGreen Footer">
   <div class="container Footer-container">
-    <%= embedded_svg 'logo-time-planet.svg', class: "Footer-logo" %>
-    <div>
-      <span class="Footer-brand">Time for the Planet</span>
-      <p class="Footer-tagline">L'entrepreneuriat au service de l'urgence climatique.</p>
-      <a href="https://www.facebook.com/Timefortheplanet/" target="_blank">
-        <%= embedded_svg 'facebook.svg', class: "Footer-icon" %>
-      </a>
-      <a href="https://www.linkedin.com/company/time-for-the-planet/" target="_blank">
-        <%= embedded_svg 'linkedin.svg', class: "Footer-icon" %>
-      </a>
+    <div class="row">
+      <div class="col-6 Footer-brand">
+        <%= embedded_svg 'logo-time-planet.svg', class: "Footer-logo" %>
+        <div>
+          <span class="Footer-brand">Time for the Planet</span>
+          <p class="Footer-tagline">L'entrepreneuriat au service de l'urgence climatique.</p>
+          <a href="https://www.facebook.com/Timefortheplanet/" target="_blank">
+            <%= embedded_svg 'facebook.svg', class: "Button Footer-icon" %>
+          </a>
+          <a href="https://www.linkedin.com/company/time-for-the-planet/" target="_blank">
+            <%= embedded_svg 'linkedin.svg', class: "Button Footer-icon" %>
+          </a>
+        </div>
+      </div>
+      <div class="col-6">
+        <div class="row">
+          <div class="col-md-4">
+            <%= link_to 'projets', projects_path, class:'Button Footer-link' %>
+            <%= link_to 'charte', vision_path, class:'Button Footer-link' %>
+          </div>
+          <div class="col-md-5">
+            <%= link_to 'contact', contact_path, class:'Button Footer-link' %>
+          </div>
+          <div class="col-md-3">
+            <a href="/" class="Button Button--underlined">Retour <i class="material-icons">arrow_upward</i></a>
+          </div>
+        </div>
+      </div>
     </div>
-    <a href="/" class="Button Button--underlined Footer-back">Retour <i class="material-icons">arrow_upward</i></a>
   </div>
 </footer>
