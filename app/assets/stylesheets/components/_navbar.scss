@@ -36,6 +36,17 @@
     }
   }
 
+  &--greenLinks {
+
+    .Navbar-link {
+      color: $lagoon-blue-tint-3;
+
+      &:hover {
+        color: $lagoon-blue;
+      }
+    }
+  }
+
   &--darkLinks {
 
     .Navbar-cta {
