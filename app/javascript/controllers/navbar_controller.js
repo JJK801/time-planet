@@ -8,6 +8,7 @@ export default class extends Controller {
     this.hamburgerActiveClass = 'is-active';
     this.darkModeClass = 'Navbar--dark';
     this.menuOpenClass = 'Navbar--menuOpen';
+    this.toggleDarkModeOnScroll();
   }
 
   closeMenuOnLargeBreakpoint() {
