@@ -72,7 +72,12 @@ SimpleForm.setup do |config|
   # Defaults to :nested for bootstrap config.
   #   inline: input + label
   #   nested: label > input
-  config.boolean_style = :nested
+  config.boolean_style = :inline
+
+  config.wrappers :checkbox, class: 'Form-field' do |b|
+    b.use :input
+    b.use :label
+  end
 
   # Default class for buttons
   config.button_class = 'Button'
@@ -108,7 +113,7 @@ SimpleForm.setup do |config|
   # config.item_wrapper_class = nil
 
   # How the label text should be generated altogether with the required text.
-  config.label_text = lambda { |label, required, explicit_label| "#{label} (requis)" }
+  config.label_text = lambda { |label, required, explicit_label| "#{label} #{'(requis)' unless required.blank?}" }
 
   # You can define the class to use on all labels. Default is nil.
   config.label_class = 'Form-label'
@@ -121,7 +126,7 @@ SimpleForm.setup do |config|
   # config.generate_additional_classes_for = [:wrapper, :label, :input]
 
   # Whether attributes are required by default (or not). Default is true.
-  # config.required_by_default = true
+  config.required_by_default = false
 
   # Tell browsers whether to use the native HTML5 validations (novalidate form option).
   # These validations are enabled in SimpleForm's internal config but disabled by default
@@ -138,6 +143,7 @@ SimpleForm.setup do |config|
   # Custom wrappers for input types. This should be a hash containing an input
   # type as key and the wrapper that will be used for all inputs with specified type.
   # config.wrapper_mappings = { string: :prepend }
+  config.wrapper_mappings = { :boolean => :checkbox }
 
   # Namespaces where SimpleForm should look for custom input classes that
   # override default inputs.

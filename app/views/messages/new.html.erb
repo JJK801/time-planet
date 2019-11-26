@@ -20,8 +20,13 @@
           </div>
           <%= f.input :sender_email, label: 'Votre email', required: true,
                       input_html: { 'data-action': 'blur->form#validate' } %>
+          <%= f.input :sender_phone, as: :tel, label: 'Votre téléphone', required: true,
+                      input_html: { 'data-action': 'blur->form#validate' } %>
           <%= f.input :body, label: 'Votre message', required: true,
                       input_html: { class: 'Form-text', 'data-action': 'blur->form#validate' } %>
+          <%= f.input :interested_to_invest, required: false,
+                      label: 'Je suis intéressé pour acheter des parts de Time for the Planet',
+                      wrapper_html: { class: 'Form-checkbox' } %>
 
           <div class="Form-actions">
             <%= f.button :submit, 'Envoyer', class: 'Button--greenBox' %>

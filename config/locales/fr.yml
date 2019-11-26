@@ -8,6 +8,7 @@ fr:
         sender_first_name: "votre prénom"
         sender_last_name: "votre nom"
         sender_email: "votre email"
+        sender_phone: "votre téléphone"
         body: "votre message"
     errors:
       messages:

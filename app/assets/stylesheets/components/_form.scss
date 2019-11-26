@@ -51,6 +51,23 @@
     }
   }
 
+  &-checkbox {
+    display: flex;
+    align-items: center;
+
+    .Form-input {
+      width: 1.5rem;
+    }
+
+    .Form-label {
+      margin-left: 0.75rem;
+    }
+
+    input[type=checkbox]:checked + label {
+      color: $white;
+    }
+  }
+
   &-text {
     min-height: 8rem;
   }
