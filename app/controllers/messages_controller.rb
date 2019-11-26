@@ -8,7 +8,6 @@ class MessagesController < ApplicationController
     @message = Message.new(message_params)
 
     if @message.save
-      MessageMailer.contact(@message).deliver_now
       redirect_to contact_path, notice: 'Votre message a bien été envoyé.'
     else
       render :new
@@ -18,6 +17,11 @@ class MessagesController < ApplicationController
   private
 
   def message_params
-    params.require(:message).permit(:sender_email, :sender_first_name, :sender_last_name, :body)
+    params.require(:message).permit(:sender_email,
+                                    :sender_first_name,
+                                    :sender_last_name,
+                                    :body,
+                                    :sender_phone,
+                                    :interested_to_invest)
   end
 end

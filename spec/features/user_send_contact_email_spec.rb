@@ -15,7 +15,6 @@ feature 'contact page' do
 
     # TODO: See with designer how to notify user of success
     # expect(page).to have_content('Votre message a bien été envoyé.')
-    expect(ActionMailer::Base.deliveries.count).to eq(1)
     expect(Message.count).to eq(1)
   end
 

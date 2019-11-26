@@ -10,6 +10,6 @@ describe HighlightedContent, type: :model do
 
     expect(project.valid?).to be false
 
-    expect(project.errors.messages[:project_id]).to eq('Project does not exist in db')
+    expect(project.errors.messages[:project_id]).to eq([{:message=>"Project does not exist in db"}])
   end
 end
