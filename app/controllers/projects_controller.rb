@@ -1,8 +1,11 @@
 class ProjectsController < ApplicationController
 
   def index
-    @projects = Project.where(published: true).order(created_at: :desc) # .page params[:page]
-    @highlighted_project = Project.first # TODO: Handle highlighted content on CMS part
+    highlighted_project_id = HighlightedContent.first.project_id
+    @projects = Project.where(published: true)
+                  .where.not(id: highlighted_project_id)
+                  .order(created_at: :desc)
+    @highlighted_project = Project.find(highlighted_project_id)
   end
 
   def show

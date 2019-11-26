@@ -28,5 +28,15 @@ module Prismic
       end
       response
     end
+
+    def highlighted_contents(_)
+      response = @api.query(
+        Prismic::Predicates.at('document.type', 'highlighted_content'),
+      )
+      response.results = response.results.map do |high|
+        Prismic::HighlightedContentSerializer.new(high)
+      end
+      response
+    end
   end
 end

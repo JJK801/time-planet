@@ -5,7 +5,7 @@ class UpdatePrismicContentsJob < ApplicationJob
     prismic_client = Prismic::Client.new
     @model = model.constantize
     @received_ids = received_ids
-    @prismic_response = prismic_client.public_send("#{@model.name.downcase}s", page)
+    @prismic_response = prismic_client.public_send("#{@model.name.underscore.downcase}s", page)
 
     reindex_all_contents
 

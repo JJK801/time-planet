@@ -1,0 +1,46 @@
+{
+  "page": 1,
+  "results_per_page": 20,
+  "results_size": 1,
+  "total_results_size": 1,
+  "total_pages": 1,
+  "next_page": null,
+  "prev_page": null,
+  "results": [{
+    "id": "highlighted_prismic_id",
+    "uid": null,
+    "type": "highlighted_content",
+    "href": "http://time-planet.cdn.prismic.io/api/v1/documents/search?ref=Xc1hmxEAACEAGQtc&q=%5B%5B%3Ad+%3D+at%28document.id%2C+%22Xc1hAhEAACMAGQii%22%29+%5D%5D",
+    "tags": [],
+    "first_publication_date": "2019-11-14T14:13:26+0000",
+    "last_publication_date": "2019-11-14T14:15:55+0000",
+    "slugs": ["contenus-mis-en-avant", "untitled-document"],
+    "linked_documents": [],
+    "lang": "fr-fr",
+    "alternate_languages": [],
+    "data": {
+      "highlighted_content": {
+        "name": {
+          "type": "Text",
+          "value": "Contenus mis en avant"
+        },
+        "highlighted_project": {
+          "type": "Link.document",
+          "value": {
+            "document": {
+              "id": "fake_prismic_id",
+              "type": "projets",
+              "tags": [],
+              "lang": "fr-fr",
+              "slug": "naissance-du-projet",
+              "uid": "mon-cdi"
+            },
+            "isBroken": false
+          }
+        }
+      }
+    }
+  }],
+  "version": "aa1901d",
+  "license": "All Rights Reserved"
+}

@@ -7,6 +7,7 @@ describe UpdatePrismicContentsJob do
     @first_call_response_body = open(Rails.root.join('spec/mocks/prismic/first_call_response_body.json')).read
     @projects_body = open(Rails.root.join('spec/mocks/prismic/projects_mock.json')).read
     @entrepreneurs_body = open(Rails.root.join('spec/mocks/prismic/entrepreneurs_mock.json')).read
+    @highlighted_content_body = open(Rails.root.join('spec/mocks/prismic/highlighted_content_mock.json')).read
   end
 
   context 'for projects' do
@@ -142,6 +143,50 @@ describe UpdatePrismicContentsJob do
       expect(fake_client).to have_received(:entrepreneurs).twice
       expect(fake_client).to have_received(:entrepreneurs).with(1)
       expect(fake_client).to have_received(:entrepreneurs).with(2)
+    end
+  end
+
+  context 'for highlighted content' do
+    before(:each) do
+      # Prismic does a first request on 'https://time-planet.cdn.prismic.io/api'
+      # Then following requests on 'https://time-planet.cdn.prismic.io/api/v1/documents/search'
+      stub_request(:get, /^(?!.*search).*#{Regexp.quote(@prismic_api_url)}.*$/).to_return(
+        { status: 200, body: @first_call_response_body })
+      stub_request(:get, /#{Regexp.quote(@prismic_api_search_url)}/).to_return(
+        { status: 200, body: @highlighted_content_body }
+      )
+      json_highlighted_content = JSON.parse(@highlighted_content_body)['results'].first
+      @project_prismic_id = json_highlighted_content['data']['highlighted_content']['highlighted_project']['value']['document']['id']
+      @prismic_id =  json_highlighted_content['id']
+    end
+
+    it 'creates a highlighted content in db when not already present' do
+      project = FactoryBot.create(:project, prismic_id: @project_prismic_id)
+
+      UpdatePrismicContentsJob.perform_now('HighlightedContent')
+
+      expect(HighlightedContent.all.count).to eq(1)
+      expect(HighlightedContent.first.prismic_id).to eq(@prismic_id)
+      expect(HighlightedContent.first.project_id).to eq(project.id)
+      expect(HighlightedContent.first.published).to be true
+    end
+
+    it 'updates a highlighted content when it is already present in db' do
+      project = FactoryBot.create(:project, prismic_id: @project_prismic_id)
+      FactoryBot.create(:entrepreneur, prismic_id: @prismic_id)
+
+      UpdatePrismicContentsJob.perform_now('HighlightedContent')
+
+      expect(HighlightedContent.first.project_id).to eq(project.id)
+    end
+
+    it 'updates published status to false when highlighted content is present in db but not in prismic response' do
+      prismic_id = 'id-not-present-in-prismic-response'
+      FactoryBot.create(:highlighted_content, prismic_id: prismic_id, published: true)
+
+      UpdatePrismicContentsJob.perform_now('HighlightedContent')
+
+      expect(HighlightedContent.find_by(prismic_id: prismic_id).published).to eq(false)
     end
   end
 end
