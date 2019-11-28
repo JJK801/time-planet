@@ -2,40 +2,46 @@
   background-color: $lagoon-blue;
   margin: 0;
 
-  &-title1 {
-    font-size: 2rem;
+  &-title {
+    font-family: $headers-font;
+    font-weight: 800;
+    letter-spacing: 0.005rem;
 
-    @media (min-width: 750px) {
-      font-size: 2.5rem;
-    }
-
-    @media (min-width: 1000px) {
-      font-size: 3rem;
-    }
-  }
-
-  &-title2 {
-    font-size: 1.75rem;
-
-    @media (min-width:750px) {
+    &--1 {
       font-size: 2rem;
+
+      @media (min-width: 750px) {
+        font-size: 2.5rem;
+      }
+
+      @media (min-width: 1000px) {
+        font-size: 3rem;
+      }
     }
 
-    @media (min-width: 1000px) {
-      font-size: 2.5rem;
-    }
-  }
-
-  &-title3 {
-    font-size: 1.5rem;
-    margin-bottom: 0.5rem;
-
-    @media (min-width:750px) {
+    &--2 {
       font-size: 1.75rem;
+
+      @media (min-width:750px) {
+        font-size: 2rem;
+      }
+
+      @media (min-width: 1000px) {
+        font-size: 2.5rem;
+      }
     }
 
-    @media (min-width: 1000px) {
-      font-size: 2rem;
+    &--3 {
+      font-size: 1.5rem;
+      margin-bottom: 0.5rem;
+
+      @media (min-width:750px) {
+        font-size: 1.75rem;
+      }
+
+      @media (min-width: 1000px) {
+        font-size: 2rem;
+      }
     }
   }
 

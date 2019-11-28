@@ -4,27 +4,10 @@
     color: $rainforest-blue;
   }
 
-  .Section {
-
-    @media (min-width: $breakpoint-md) {
-      padding-top: 4rem;
-      padding-bottom: 4rem;
-    }
-  }
-
   .Header {
-    position: relative;
 
     @media (min-width: $breakpoint-md) {
       min-height: 100vh;
-    }
-
-    &-subtitle {
-      font-family: $headers-font;
-      font-weight: 800;
-      letter-spacing: 0.005rem;
-      font-size: 2rem;
-      margin-top: 4rem;
     }
 
     &-image {

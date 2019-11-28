@@ -10,10 +10,24 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_11_26_143956) do
+ActiveRecord::Schema.define(version: 2019_11_28_141357) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "associates_updates", force: :cascade do |t|
+    t.integer "total_raised"
+    t.integer "total_associates"
+    t.string "last_associate_name_1"
+    t.integer "last_associate_shares_1"
+    t.date "last_associate_date_1"
+    t.string "last_associate_name_2"
+    t.integer "last_associate_shares_2"
+    t.date "last_associate_date_2"
+    t.string "last_associate_name_3"
+    t.integer "last_associate_shares_3"
+    t.date "last_associate_date_3"
+  end
 
   create_table "entrepreneurs", force: :cascade do |t|
     t.string "prismic_id"

@@ -92,7 +92,7 @@
     text-transform: none;
   }
 
-  &:not(&--lgShift) {
+  &--mdShift {
     @include for-size($breakpoint-md);
   }
 

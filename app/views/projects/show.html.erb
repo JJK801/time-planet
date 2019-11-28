@@ -17,7 +17,7 @@
                       target: '_blank',
                       class: 'Button ProjectHeader-link'%>
         </div>
-        <h1 class="Base-title2"><%= @project.title %></h1>
+        <h1 class="Base-title Base-title--2"><%= @project.title %></h1>
         <p class="Base-text"><%= @project.long_summary %></p>
         <div class="ProjectHeader-tags">
           <% 4.times do |i| %>
@@ -67,7 +67,7 @@
   <div class="container">
     <div class="row">
       <div class="col-md-4">
-        <h2 class="Base-title2 TeamTitle">L'équipe fondatrice de <%= @project.title %></h2>
+        <h2 class="Base-title Base-title--2 TeamTitle">L'équipe fondatrice de <%= @project.title %></h2>
       </div>
       <div class="col-md-8">
         <div class="row">
@@ -94,7 +94,7 @@
 <div class="Section Section--white">
   <div class="container">
     <div class="CarouselHeader">
-      <h3 class="Base-title3">Découvrir plus de projets</h3>
+      <h3 class="Base-title Base-title--3">Découvrir plus de projets</h3>
       <%= link_to projects_path, class: 'Button Button--green' do %>
         Voir tous les projets <i class="material-icons">arrow_forward</i>
       <% end %>

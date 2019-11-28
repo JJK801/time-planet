@@ -1,0 +1,25 @@
+.Scale {
+  font-family: $headers-font;
+  color: $grey4;
+  font-size: 2rem;
+  font-weight: 800;
+  margin-bottom: 2rem;
+
+  &-container {
+    height: 2rem;
+    background-color: $grey6;
+    border-radius: 2rem;
+    overflow: hidden;
+    margin-bottom: 1rem;
+  }
+
+  &-cursor {
+    background-color: $rainforest-blue;
+    display: inline-block;
+    height: 100%;
+  }
+
+  &-legend {
+    text-align: right;
+  }
+}

@@ -1,0 +1,148 @@
+<% content_for :navbar_classes, 'Navbar--darkLogo Navbar--darkLinks' %>
+
+<div class="Section Section--lightGrey">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6">
+        <h1 class="Base-title Base-title--1">Devenir associé·e</h1>
+        <p class="Base-subtitle">Aidez-nous à réunir 1 milliard d’euros pour créer 100 entreprises luttant
+        contre le dérèglement climatique.</p>
+      </div>
+      <div class="col-md-5 offset-md-1">
+        <div class="Indicators">
+          <div class="Indicators-item">
+            <p class="Base-title Base-title--2"><%= @associates_update.total_raised %> €</p>
+            <p class="Base-text">déjà rassemblés</p>
+          </div>
+          <div class="Indicators-item">
+            <p class="Base-title Base-title--2"><%= @associates_update.total_associates %> €</p>
+            <p class="Base-text">associé·es</p>
+          </div>
+        </div>
+        <p class="Base-text">
+          Chaque part peut être achetée pour 1 euro.
+          <a href="#associate-status" class="Link">En savoir plus sur le statut d’associé·e.</a>
+      </div>
+    </div>
+    <div class="Scale">
+      <div class="Scale-container">
+        <span class="Scale-cursor" style="width: <%= "#{@associates_update.step_percentage}%" %>;"></span>
+      </div>
+      <div class="Scale-legend">
+        300 000 €
+      </div>
+    </div>
+    <div class="PictureCard PictureCard--biggerMarginBottom">
+      <%= image_tag 'climatisation-sans-electricite.jpg', class: 'PictureCard-image' %>
+      <div class="PictureCard-content">
+        <h4 class="PictureCard-title PictureCard-title--downcase">
+          <b>Premier Palier: 300 000 €</b>
+        </h4>
+        <p class="PictureCard-text">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+          et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+          aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
+          dolore eu fugiat nulla pariatur.
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="Section Section--lagoon SecondSection">
+  <div class="container">
+    <p class="Base-title Base-title--2">Agir en grand</p>
+    <p class="Base-subtitle">S’investir dans un projet capable de changer la face du monde.</p>
+    <p class="Base-title Base-title--2">Efficacité</p>
+    <p class="Base-subtitle">Votre argent est le moyen pour Time for the Planet de créer des entreprises
+      qui travaillent au sauvetage de la planète.</p>
+    <p class="Base-title Base-title--2">Une mission pour le monde</p>
+    <p class="Base-subtitle">Le seul objectif de Time for the Planet est la sauvegarde de la planète.
+      Nos bénéfices servent exclusivement cette cause. Nous ne rémunérons aucun actionnaire.</p>
+    <p class="Base-title Base-title--2">Transparence</p>
+    <p class="Base-subtitle">Tous nos comptes sont publics. Tous nos brevets sont mis à disposition de
+      toutes et tous sans contrepartie.</p>
+  </div>
+</div>
+
+<div class="Section Section--twoColors" id="associate-status">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-5">
+        <h2 class="Base-subtitle">Comment devenir associé·e ?</h2>
+        <p class="Base-title Base-title--3">La société Time for the Planet est découpée en 1 milliard de parts, toutes
+          numérotées. Une part coûte 1 euro.</p>
+        <p class="Base-title Base-title--3">Vous pouvez acheter le nombre de parts que vous souhaitez, mais également
+          en racheter à tout moment dans le futur (tant qu’il y en a&nbsp;!)</p>
+      </div>
+      <div class="col-md-4 offset-md-2 Section-text--twoColorsRight">
+        <h2 class="Base-subtitle">Etre associé·e me donne quels droits ?</h2>
+        <h3 class="Base-title Base-title--3">Droit de vote</h3>
+        <p class="Base-text Base-text--withSeparator">
+          Vous pouvez voter ou être candidat·e au board, organe de décision de Time for the Planet, selon le
+          principe de 1 personne = 1 voix
+        </p>
+        <h3 class="Base-title Base-title--3">Participation</h3>
+        <p class="Base-text Base-text--withSeparator">
+          Vous pouvez créer des événements au nom de Time for the planet, en devenant un·e référent·e
+          “Team for the Planet”.
+        </p>
+        <h3 class="Base-title Base-title--3">Time for the Planet, c’est vous</h3>
+        <p class="Base-text Base-text--withSeparator">
+          Vous êtes propriétaire d’une partie de l’entreprise.
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="Section Section--lightGrey Section--withBackgroundImage">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-5">
+        <h2 class="Base-title Base-title--2">
+          Que vais-je recevoir après être devenu associé·e ?
+        </h2>
+        <ul class="Benefits">
+          <li>
+            <i class="material-icons">check_circle</i>
+            <p>
+              <b>Un certificat</b> officialisant le nombre de parts que vous détenez.
+              Un indispensable pour décorer votre salon, et engager la discussion avec vos ami·es !
+            </p>
+          </li>
+          <li>
+            <i class="material-icons">check_circle</i>
+            <p>
+              <b>Une carte de visite d’associé·e</b> Time for the Planet à votre nom, que vous pouvez
+              imprimer (sur du papier recyclé bien sûr).
+            </p>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="Section-imageBackground BenefitsImage"></div>
+  </div>
+</div>
+
+<div class="Section Section--lagoon">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4 offset-md-4">
+        <h2 class="Base-title Bast-title--2">Les associé·es</h2>
+        <% 3.times do |index| %>
+          <p class="Base-text Base-text--withSeparator">
+            <b><%= @associates_update.public_send("last_associate_name_#{index + 1}") %></b>
+            est devenu·e associé·e avec
+            <b><%= @associates_update.public_send("last_associate_shares_#{index + 1}") %></b>
+            parts
+            <% if @associates_update.public_send("last_associate_date_#{index + 1}").present? %>
+              il y a
+              <%= time_ago_in_words(@associates_update.public_send("last_associate_date_#{index + 1}")) %>.
+            <% end %>
+          </p>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>

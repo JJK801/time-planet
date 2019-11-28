@@ -2,6 +2,7 @@
   padding-top: 2.5rem;
   padding-bottom: 2.5rem;
   width: 100%;
+  position: relative;
 
   &:first-of-type {
     padding-top: 5rem;
@@ -9,11 +10,6 @@
     @media (min-width: $breakpoint-md) {
       padding-top: 6rem;
     }
-  }
-
-  @media (min-width: $breakpoint-md) {
-    padding-top: 6rem;
-    padding-bottom: 6rem;
   }
 
   &--black {
@@ -29,6 +25,10 @@
   &--lagoon {
     background-color: $lagoon-blue;
     color: $planet-black;
+
+    .Base-text--withSeparator {
+      border-color: $white;
+    }
 
     em {
       color: $lagoon-blue;
@@ -78,11 +78,11 @@
 
   &-imageBackground {
     display: none;
+    background-size: cover;
 
     @media (min-width: $breakpoint-md) {
       display: block;
     }
-    background-size: cover;
   }
 
   &-text {

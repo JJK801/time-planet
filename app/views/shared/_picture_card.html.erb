@@ -1,7 +1,7 @@
 <% if href.blank? %>
-  <div class="PictureCard">
+  <div class="PictureCard PictureCard--mdShift">
 <% else %>
-  <a class="PictureCard" href="<%= href %>">
+  <a class="PictureCard PictureCard--mdShift" href="<%= href %>">
 <% end %>
   <img src="<%= picture_url %>" alt="<%= picture_alt %>" class="PictureCard-image">
   <div class="PictureCard-content">
