@@ -11,13 +11,13 @@ AssociatesUpdate.destroy_all
 AssociatesUpdate.create(
                   total_raised: 19,
                   total_associates: 9,
-                  last_associate_name_1: 'Harry Potter',
-                  last_associate_shares_1: 3,
+                  last_associate_name_1: 'Mehdi Coly',
+                  last_associate_shares_1: 1,
                   last_associate_date_1: Date.today,
-                  last_associate_name_2: 'Hermione Granger',
-                  last_associate_shares_2: 2,
-                  last_associate_date_2: Date.yesterday,
-                  last_associate_name_3: 'Severus Snake',
+                  last_associate_name_2: 'Nicolas Sabatier',
+                  last_associate_shares_2: 1,
+                  last_associate_date_2: Date.today,
+                  last_associate_name_3: 'Laurent Morel',
                   last_associate_shares_3: 1,
-                  last_associate_date_3: Date.yesterday
+                  last_associate_date_3: Date.today
 )

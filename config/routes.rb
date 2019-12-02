@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   get 'devenir-associee', to: 'pages#become_associate'
 
   post '/webhooks/prismic', to: 'webhooks#prismic'
+  post '/webhooks/associates', to: 'webhooks#associates'
 
   resources :projects, only: [:index, :show], path: 'projets', param: :slug
 
