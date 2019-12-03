@@ -8,9 +8,15 @@
     </a>
     <div class="Navbar-links">
       <%= link_to 'charte', vision_path, class: 'Button Navbar-link' %>
-      <a href="/contact" class="Navbar-cta Button Button--underlined">
-        Je m'engage <i class="material-icons">arrow_forward</i>
-      </a>
+
+      <% if request.path == become_associate_path %>
+        <%= link_to 'Je deviens associé·e', 'https://automate-me.typeform.com/to/q56jyQ',
+            class:'Button Button--box Button--darkGreenBox', target: "_blank" %>
+      <% else %>
+        <a href="/contact" class="Navbar-cta Button Button--underlined">
+          Je m'engage <i class="material-icons">arrow_forward</i>
+        </a>
+      <% end %>
     </div>
     <button class="Navbar-hamburger Nabbar-link hamburger hamburger--squeeze"
             type="button"

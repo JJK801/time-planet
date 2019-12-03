@@ -23,7 +23,9 @@ export default class extends Controller {
   }
 
   toggleDarkModeOnScroll() {
-    if (!this.isWindowAtTheTop()) {
+    if (this.element.classList.contains('Navbar--notSticky')) {
+      return;
+    } else if (!this.isWindowAtTheTop()) {
       this.element.classList.add(this.darkModeClass);
     } else {
       this.element.classList.remove(this.darkModeClass);

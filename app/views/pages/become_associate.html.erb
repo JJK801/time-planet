@@ -1,4 +1,4 @@
-<% content_for :navbar_classes, 'Navbar--darkLogo Navbar--darkLinks' %>
+<% content_for :navbar_classes, 'Navbar--darkLogo Navbar--darkLinks Navbar--notSticky Navbar--lightGrey' %>
 
 <div class="Section Section--lightGrey">
   <div class="container">
@@ -15,7 +15,7 @@
             <p class="Base-text">déjà rassemblés</p>
           </div>
           <div class="Indicators-item">
-            <p class="Base-title Base-title--2"><%= @associates_update.total_associates %> €</p>
+            <p class="Base-title Base-title--2"><%= @associates_update.total_associates %></p>
             <p class="Base-text">associé·es</p>
           </div>
         </div>
@@ -49,7 +49,9 @@
   </div>
 </div>
 
-<div class="Section Section--lagoon SecondSection">
+<%= render 'content_navbar' %>
+
+<div class="Section Section--lagoon SecondSection" id="why">
   <div class="container">
     <p class="Base-title Base-title--2">Agir en grand</p>
     <p class="Base-subtitle">S’investir dans un projet capable de changer la face du monde.</p>
@@ -96,7 +98,7 @@
   </div>
 </div>
 
-<div class="Section Section--lightGrey Section--withBackgroundImage">
+<div class="Section Section--lightGrey Section--withBackgroundImage" id="benefits">
   <div class="container">
     <div class="row">
       <div class="col-md-5">
@@ -125,7 +127,7 @@
   </div>
 </div>
 
-<div class="Section Section--lagoon">
+<div class="Section Section--lagoon" id="associates">
   <div class="container">
     <div class="row">
       <div class="col-md-4 offset-md-4">

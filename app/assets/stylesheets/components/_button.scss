@@ -10,6 +10,7 @@
   text-decoration: none;
   transition: all 0.3s;
   cursor: pointer;
+  text-align: center;
 
   @media (min-width: $breakpoint-sm) {
     font-size: 1.25rem;
@@ -33,7 +34,7 @@
     color: $rainforest-blue-tint1;
   }
 
-  &--greenBox {
+  &--box {
     background-color: $lagoon-blue;
     color: $planet-black;
     padding: 1rem 2rem;
@@ -45,6 +46,15 @@
       background-color: $lagoon-blue-tint-4;
       color: $planet-black;
       transition: background-color 0.3s;
+    }
+  }
+
+  &--darkGreenBox {
+    background-color: $rainforest-blue-tint1;
+    color: $white;
+
+    &:hover {
+      background-color: $rainforest-blue;
     }
   }
 }
