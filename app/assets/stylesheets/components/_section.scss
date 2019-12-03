@@ -4,7 +4,7 @@
   width: 100%;
   position: relative;
 
-  &:first-of-type {
+  &--first {
     padding-top: 5rem;
 
     @media (min-width: $breakpoint-md) {

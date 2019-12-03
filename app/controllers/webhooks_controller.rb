@@ -26,7 +26,7 @@ class WebhooksController < ApplicationController
       last_associate_date_2: params['last_associate_date_2'],
       last_associate_name_3: params['last_associate_name_3'],
       last_associate_shares_3: params['last_associate_shares_3'],
-      last_associate_date_3:params['tlast_associate_date_3']
+      last_associate_date_3: params['last_associate_date_3']
     })
     head :no_content
   end
