@@ -1,0 +1,9 @@
+<% if notice %>
+  <div class="Alert Alert--success" role="alert" data-controller="alert">
+    <span class="Alert-icon">💌</span>
+    <span class="Alert-content"><%= notice %></span>
+    <button type="button" class="Alert-close" aria-label="Close" data-action="alert#close">
+      <i aria-hidden="true" class="material-icons">close</i>
+    </button>
+  </div>
+<% end %>

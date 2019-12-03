@@ -13,8 +13,7 @@ feature 'contact page' do
     fill_in 'message[body]', with: message.body
     click_button 'Envoyer'
 
-    # TODO: See with designer how to notify user of success
-    # expect(page).to have_content('Votre message a bien été envoyé.')
+    expect(page).to have_content('Votre message a bien été envoyé.')
     expect(Message.count).to eq(1)
   end
 
