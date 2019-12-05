@@ -3,10 +3,10 @@
      data-action="scroll@window->content-navbar#stickNavbar">
   <div class="container">
     <ul class="ContentNavbar-links">
-      <li><%= link_to 'Pourquoi devenir associé·e ?', '#why' %></li>
-      <li><%= link_to 'Droit des associé·es', '#associate-status' %></li>
-      <li><%= link_to 'Récompenses', '#benefits' %></li>
-      <li><%= link_to 'Les associé·es', '#associates' %></li>
+      <li><%= link_to 'Pourquoi devenir associé·e ?', '#why', data: { action: 'content-navbar#scroll' } %></li>
+      <li><%= link_to 'Droit des associé·es', '#associate-status', data: { action: 'content-navbar#scroll' } %></li>
+      <li><%= link_to 'Récompenses', '#benefits', data: { action: 'content-navbar#scroll' } %></li>
+      <li><%= link_to 'Les associé·es', '#associates', data: { action: 'content-navbar#scroll' } %></li>
       <li><%= link_to 'Je deviens associé·e', 'https://automate-me.typeform.com/to/q56jyQ',
           class:'Button Button--box Button--darkGreenBox', target: "_blank" %></li>
     </ul>
