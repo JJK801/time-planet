@@ -34,15 +34,29 @@
   }
 
   .BenefitsImage {
-    background-image: image-url("blank-frame-above-table.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
     position: absolute;
     right: 0;
     top: 0;
     bottom: 0;
     left: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+
+    &-image {
+      width: 80%;
+      object-fit: contain;
+      box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.15);
+      display: none;
+
+      @media (min-width: $breakpoint-md) {
+        display: block;
+      }
+    }
   }
+
+
 
   .Indicators {
     display: flex;
