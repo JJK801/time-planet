@@ -1,5 +1,28 @@
 .pages-become_associate {
 
+  .Cta {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    padding: 1rem;
+    justify-content: center;
+    border-radius: 0;
+
+    @media (min-width: $breakpoint-lg) {
+      display: none;
+    }
+  }
+
+  .Navbar {
+    padding-top: 5rem;
+
+    @media (min-width: $breakpoint-lg) {
+      padding-top: 0;
+    }
+  }
+
   .Section--first {
     padding-top: 1rem;
   }

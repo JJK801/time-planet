@@ -1,5 +1,10 @@
 <% content_for :navbar_classes, 'Navbar--darkLogo Navbar--darkLinks Navbar--notSticky Navbar--lightGrey' %>
 
+<%= link_to 'https://automate-me.typeform.com/to/q56jyQ',
+    class:'Cta Button Button--box Button--darkGreenBox', target: "_blank" do %>
+  Je deviens associé·e <i class="material-icons">arrow_forward</i>
+<% end %>
+
 <div class="Section Section--lightGrey Section--first">
   <div class="container">
     <div class="row">
@@ -11,11 +16,11 @@
       <div class="col-md-5 offset-md-1">
         <div class="Indicators">
           <div class="Indicators-item">
-            <p class="Base-title Base-title--2"><%= @associates_update.total_raised %> €</p>
+            <p class="Base-title Base-title--2"><%= number_with_delimiter(@associates_update.total_raised, locale: :fr) %>&nbsp;€</p>
             <p class="Base-text">déjà rassemblés</p>
           </div>
           <div class="Indicators-item">
-            <p class="Base-title Base-title--2"><%= @associates_update.total_associates %></p>
+            <p class="Base-title Base-title--2"><%= number_with_delimiter(@associates_update.total_associates, locale: :fr) %></p>
             <p class="Base-text">associé·es</p>
           </div>
         </div>
