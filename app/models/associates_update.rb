@@ -6,7 +6,7 @@ class AssociatesUpdate < ApplicationRecord
     if total_raised / 300000.0 * 100 < 0.5
       0.5
     else
-      total_raised / 300000.0
+      total_raised / 300000.0 * 100
     end
   end
 end
