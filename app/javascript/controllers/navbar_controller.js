@@ -9,6 +9,7 @@ export default class extends Controller {
     this.darkModeClass = 'Navbar--dark';
     this.menuOpenClass = 'Navbar--menuOpen';
     this.toggleDarkModeOnScroll();
+    clearAllBodyScrollLocks();
   }
 
   closeMenuOnLargeBreakpoint() {
