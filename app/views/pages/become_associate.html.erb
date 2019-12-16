@@ -1,9 +1,8 @@
 <% content_for :navbar_classes, 'Navbar--darkLogo Navbar--darkLinks Navbar--notSticky Navbar--lightGrey' %>
 
-<%= link_to 'https://automate-me.typeform.com/to/q56jyQ',
-    class:'Cta Button Button--box Button--darkGreenBox', target: "_blank" do %>
-  Je deviens associé·e <i class="material-icons">arrow_forward</i>
-<% end %>
+<%= render 'associate_form' %>
+
+<%= render 'shared/associate_cta', class_name: 'Cta' %>
 
 <div class="Section Section--lightGrey Section--first">
   <div class="container">

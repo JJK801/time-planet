@@ -10,6 +10,8 @@ fr:
         sender_email: "votre email"
         sender_phone: "votre téléphone"
         body: "votre message"
+      associate:
+        email: "votre email"
     errors:
       messages:
         record_invalid: 'La validation a échoué : %{errors}'

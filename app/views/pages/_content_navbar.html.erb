@@ -7,12 +7,7 @@
       <li><%= link_to 'Droit des associé·es', '#associate-status', data: { action: 'content-navbar#scroll' } %></li>
       <li><%= link_to 'Récompenses', '#benefits', data: { action: 'content-navbar#scroll' } %></li>
       <li><%= link_to 'Les associé·es', '#associates', data: { action: 'content-navbar#scroll' } %></li>
-      <li>
-        <%= link_to 'https://automate-me.typeform.com/to/q56jyQ',
-            class:'Button Button--box Button--darkGreenBox', target: "_blank" do %>
-          Je deviens associé·e <i class="material-icons">arrow_forward</i>
-        <% end %>
-      </li>
+      <li><%= render 'shared/associate_cta' %></li>
     </ul>
   </div>
 </div>

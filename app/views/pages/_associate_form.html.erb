@@ -1,0 +1,30 @@
+<div class="Section Section--darkGreen AssociateForm" data-target="associate-form.form">
+  <div class="container AssociateForm-container">
+    <button class="Button AssociateForm-close" data-action="associate-form#closeForm">
+      retour <i class="material-icons">clear</i>
+    </button>
+    <%= image_tag 'certificat.jpg', class: 'AssociateForm-image' %>
+    <p class="Base-subtitle">
+      Dans 2 minutes, vous aurez réservé les premières parts sociales de Time for the Planet,
+      pour lutter à grande échelle contre le changement climatique.
+    </p>
+    <form class="Form AssociateForm-form" id="associate" data-controller="form" novalidate="novalidate" accept-charset="UTF-8">
+      <input name="utf8" type="hidden" value="✓">
+      <div class="Form-field email required associate_email">
+        <label class="email required Form-label" for="associate_email">Votre email (requis)</label>
+        <input class="Form-input string email required Form-input"
+               data-action="blur->form#validate"
+               data-target="associate-form.email"
+               required="required"
+               aria-required="true"
+               type="email"
+               name="associate[email]"
+               id="associate_email">
+      </div>
+      <%= link_to 'https://automate-me.typeform.com/to/q56jyQ',
+          class:'Button Button--box AssociateForm-submit', target: "_blank", data: { action: 'associate-form#validate' } do %>
+        C'est parti
+      <% end %>
+    </form>
+  </div>
+</div>

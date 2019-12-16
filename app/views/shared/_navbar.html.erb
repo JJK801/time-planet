@@ -10,10 +10,7 @@
       <%= link_to 'charte', vision_path, class: 'Button Navbar-link' %>
 
       <% if request.path == become_associate_path %>
-        <%= link_to 'https://automate-me.typeform.com/to/q56jyQ',
-            class:'Button Button--box Button--darkGreenBox', target: "_blank" do %>
-          Je deviens associé·e <i class="material-icons">arrow_forward</i>
-        <% end %>
+        <%= render 'shared/associate_cta' %>
       <% else %>
         <a href="/devenir-associee" class="Navbar-cta Button Button--underlined">
           J'agis <i class="material-icons">arrow_forward</i>

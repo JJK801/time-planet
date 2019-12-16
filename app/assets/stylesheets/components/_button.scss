@@ -11,6 +11,8 @@
   transition: all 0.3s;
   cursor: pointer;
   text-align: center;
+  background-color: transparent;
+  border: none;
 
   @media (min-width: $breakpoint-sm) {
     font-size: 1.25rem;
