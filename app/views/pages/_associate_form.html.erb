@@ -8,7 +8,12 @@
       Dans 2 minutes, vous aurez réservé les premières parts sociales de Time for the Planet,
       pour lutter à grande échelle contre le changement climatique.
     </p>
-    <form class="Form AssociateForm-form" id="associate" data-controller="form" novalidate="novalidate" accept-charset="UTF-8">
+    <form class="Form AssociateForm-form"
+          id="associate"
+          data-controller="form"
+          data-action="associate-form#validate"
+          novalidate="novalidate"
+          accept-charset="UTF-8">
       <input name="utf8" type="hidden" value="✓">
       <div class="Form-field email required associate_email">
         <label class="email required Form-label" for="associate_email">Votre email (requis)</label>
@@ -22,7 +27,9 @@
                id="associate_email">
       </div>
       <%= link_to 'https://automate-me.typeform.com/to/q56jyQ',
-          class:'Button Button--box AssociateForm-submit', target: "_blank", data: { action: 'associate-form#validate' } do %>
+          class:'Button Button--box AssociateForm-submit',
+          target: "_blank",
+          data: { target: 'associate-form.link', action: 'associate-form#validate' } do %>
         C'est parti
       <% end %>
     </form>

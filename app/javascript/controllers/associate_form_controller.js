@@ -2,7 +2,7 @@ import { Controller } from 'stimulus';
 import {disableBodyScroll, enableBodyScroll, clearAllBodyScrollLocks} from 'body-scroll-lock';
 
 export default class extends Controller {
-  static targets = [ 'form', 'email' ];
+  static targets = [ 'form', 'email', 'link' ];
 
   connect() {
     this.formOpenClass = 'AssociateForm--open';
@@ -22,9 +22,11 @@ export default class extends Controller {
 
   validate(event) {
     event.preventDefault();
+    this.emailTarget.blur();
     if (this.emailTarget.validity.valid) {
       const email = this.emailTarget.value;
-      window.open(`${event.target.href}?mail=${email}`, '_blank');
+      const url = this.linkTarget.href;
+      window.open(`${url}?mail=${email}`, '_blank');
     }
   }
 }
