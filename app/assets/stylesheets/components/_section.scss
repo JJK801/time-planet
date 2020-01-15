@@ -12,6 +12,10 @@
     }
   }
 
+  &--lessPaddingBottom {
+    padding-bottom: 0.5rem;
+  }
+
   &--black {
     background-color: $black;
     color: $white;

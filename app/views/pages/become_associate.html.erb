@@ -4,13 +4,15 @@
 
 <%= render 'shared/associate_cta', class_name: 'Cta' %>
 
-<div class="Section Section--lightGrey Section--first">
+<div class="Section Section--lightGrey Section--first Section--lessPaddingBottom">
   <div class="container">
     <div class="row">
       <div class="col-md-6">
-        <h1 class="Base-title Base-title--1">Devenir associé·e</h1>
-        <p class="Base-subtitle">Aidez-nous à réunir 1 milliard d’euros pour créer 100 entreprises luttant
-        contre le dérèglement climatique.</p>
+        <h1 class="Base-title Base-title--1 Base-title--1 Base-title--noMarginBottom">Devenir associé·e</h1>
+        <p class="Base-subtitle Base-subtitle--verySmall">
+          Aidez-nous à réunir 1 milliard d’euros pour créer 100 entreprises luttant
+          contre le dérèglement climatique.
+        </p>
         <p class="Base-text">
           Chaque part peut être achetée pour 1 euro.
           <a href="#associate-status" class="Link">En savoir plus sur le statut d’associé·e.</a>
@@ -24,12 +26,14 @@
           </div>
           <div class="Indicators-item">
             <p class="Base-title Base-title--2"><%= number_with_delimiter(@associates_update.total_associates, locale: :fr) %></p>
-            <p class="Base-text">associé·es</p>
+            <p class="Base-text">soutiens</p>
           </div>
         </div>
         <div class="Indicators">
           <div class="Indicators-item">
-            <p class="Base-title Base-title--2"><%= (Date.today - Date.parse('05-12-2019')).to_i  %></p>
+            <p class="Base-title Base-title--2 Base-title--noMarginTop">
+              <%= (Date.today - Date.parse('05-12-2019')).to_i  %>
+            </p>
             <p class="Base-text">jours depuis le début de la levée de fonds</p>
           </div>
         </div>
@@ -43,7 +47,7 @@
         300 000 €
       </div>
     </div>
-    <div class="Step PictureCard PictureCard--biggerMarginBottom">
+    <div class="Step PictureCard">
       <%= image_tag 'climatisation-sans-electricite.jpg', class: 'PictureCard-image' %>
       <div class="PictureCard-content">
         <h4 class="PictureCard-title PictureCard-title--downcase">
@@ -83,9 +87,13 @@
     <div class="row">
       <div class="col-md-5">
         <h2 class="Base-subtitle">Comment devenir associé·e ?</h2>
-        <p class="Base-title Base-title--3">La société Time for the Planet est découpée en 1 milliard de parts, toutes
-          numérotées. Une part coûte 1 euro.</p>
-        <p class="Base-title Base-title--3">Vous pouvez acheter le nombre de parts que vous souhaitez, mais également
+        <p class="Base-title Base-title--4">La société est en cours de modification pour permettre d'accueillir
+        plus d'associé·es. En attendant, vous pouvez montrer votre soutien au projet en manifestant votre volonté
+        de devenir associé·e. De cette façon, vous nous permettez d'avoir plus de poids lorsque nous recontrons
+        des décideurs et des financiers.</p>
+        <p class="Base-title Base-title--4">La société Time for the Planet sera découpée en 1 milliard de parts, toutes
+          numérotées. Une part coûtera 1 euro.</p>
+        <p class="Base-title Base-title--4">Vous pourrez acheter le nombre de parts que vous souhaitez, mais également
           en racheter à tout moment dans le futur (tant qu’il y en a&nbsp;!)</p>
       </div>
       <div class="col-md-4 offset-md-2 Section-text--twoColorsRight">
@@ -144,11 +152,11 @@
   <div class="container">
     <div class="row">
       <div class="col-md-4 offset-md-4">
-        <h2 class="Base-title Bast-title--2">Les associé·es</h2>
+        <h2 class="Base-title Bast-title--2">Les dernier·es futur·es associé·es</h2>
         <% 3.times do |index| %>
           <p class="Base-text Base-text--withSeparator">
             <b><%= @associates_update.public_send("last_associate_name_#{index + 1}") %></b>
-            est devenu·e associé·e avec
+            s'est engagé·e avec
             <b><%= @associates_update.public_send("last_associate_shares_#{index + 1}") %></b>
             parts
             <% if @associates_update.public_send("last_associate_date_#{index + 1}").present? %>
