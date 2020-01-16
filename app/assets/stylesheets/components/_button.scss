@@ -33,6 +33,16 @@
     border-bottom: solid $white 3px;
   }
 
+  &--underlinedDark {
+    border-bottom: solid $planet-black 3px;
+
+    &:hover {
+      transition: all 0.3s;
+      color: $rainforest-blue-tint2;
+      border-bottom: solid $rainforest-blue-tint2 3px;
+    }
+  }
+
   &--green {
     color: $rainforest-blue-tint1;
   }
