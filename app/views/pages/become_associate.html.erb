@@ -125,7 +125,7 @@
         <% 3.times do |index| %>
           <p class="Base-text Base-text--withSeparator">
             <b><%= @associates_update.public_send("last_associate_name_#{index + 1}") %></b>
-            s'est engagé·e avec
+            s'est engagé·e à acquérir
             <b><%= @associates_update.public_send("last_associate_shares_#{index + 1}") %></b>
             parts
             <% if @associates_update.public_send("last_associate_date_#{index + 1}").present? %>
