@@ -3,7 +3,7 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '2.6.5'
 
-gem 'rails', '~> 5.2.3'
+gem 'rails', '~> 5.2', '>= 5.2.4.1'
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.1.0', require: false
@@ -13,7 +13,7 @@ gem 'jbuilder', '~> 2.5'
 gem 'material_icons'
 gem 'pg', '>= 0.18', '< 2.0'
 gem 'prismic.io', require: 'prismic'
-gem 'puma', '~> 3.11'
+gem "puma", ">= 3.12.2"
 gem 'sass-rails', '~> 5.0'
 gem 'sendgrid-actionmailer'
 gem 'sidekiq'
