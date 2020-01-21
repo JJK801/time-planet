@@ -9,23 +9,34 @@
     right: 0;
     z-index: 4;
     min-height: 100%;
+    padding-bottom: 0;
+    padding-top: 0;
   }
 
   &-container {
     display: flex;
     flex-direction: column;
     align-items: center;
+    overflow-y: scroll;
+    position: relative;
+    max-height: 100vh;
   }
 
-  &-close {
-    align-self: end;
-    margin-bottom: 3rem;
+  &-closeContainer {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  &-close.Button {
+    font-size: 1rem;
+    height: 2rem;
   }
 
   &-form {
     display: flex;
     align-items: center;
     flex-direction: column;
+    padding-bottom: 3.5rem;
 
     @media (min-width: $breakpoint-md) {
       flex-direction: row;

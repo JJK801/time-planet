@@ -2,7 +2,7 @@ import { Controller } from 'stimulus';
 import {disableBodyScroll, enableBodyScroll, clearAllBodyScrollLocks} from 'body-scroll-lock';
 
 export default class extends Controller {
-  static targets = [ 'form', 'email', 'link' ];
+  static targets = [ 'container', 'form', 'email', 'link' ];
 
   connect() {
     this.formOpenClass = 'AssociateForm--open';
@@ -11,13 +11,13 @@ export default class extends Controller {
 
   closeForm() {
     this.formTarget.classList.remove(this.formOpenClass);
-    enableBodyScroll(this.formTarget);
+    enableBodyScroll(this.containerTarget);
   }
 
   openForm() {
     this.formTarget.classList.add(this.formOpenClass);
+    disableBodyScroll(this.containerTarget);
     this.emailTarget.focus();
-    disableBodyScroll(this.formTarget);
   }
 
   validate(event) {
