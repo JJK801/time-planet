@@ -15,6 +15,14 @@
     }
   }
 
+  .AssociateCta {
+    display: none;
+
+    @media (min-width: $breakpoint-md) {
+      display: inline-block;
+    }
+  }
+
   .Footer {
     padding-bottom: 6rem;
 

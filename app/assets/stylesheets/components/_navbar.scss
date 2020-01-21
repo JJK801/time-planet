@@ -122,30 +122,38 @@
   }
 
   &-logoContainer {
-    font-size: 1rem;
+    font-size: 0.75rem;
     text-transform: none;
     font-family: $headers-font;
     font-weight: 200;
     display: flex;
     align-items: center;
+    flex-direction: column;
 
-    @media (min-width: $breakpoint-md) {
+    @media (min-width: $breakpoint-lg) {
       font-size: 2rem;
+      flex-direction: row;
     }
   }
 
   &-logo {
-    height: 1.5rem;
-    width: 1.5rem;
-    margin-right: 1.25rem;
+    height: 1rem;
+    width: 1rem;
+    margin-bottom: 0.5rem;
 
     @media (min-width: $breakpoint-md) {
       height: 2.25rem;
       width: 2.25rem;
+      margin-right: 1.25rem;
     }
   }
 
   &-links {
+    display: flex;
+    align-items: center;
+  }
+
+  &-linkDesktop {
     display: none;
 
     @media (min-width: $breakpoint-lg) {
