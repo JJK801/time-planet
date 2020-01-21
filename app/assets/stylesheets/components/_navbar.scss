@@ -1,14 +1,19 @@
 .Navbar {
-  background-color: transparent;
   color: $white;
-  position: fixed;
-  top: 0;
+  position: absolute;
+  top: 64px;
   left: 0;
   right: 0;
   z-index: 1;
 
   &--notSticky {
     position: relative;
+    top: 0;
+  }
+
+  &--sticky {
+    position: fixed;
+    top: 0px;
   }
 
   &--lightGrey {

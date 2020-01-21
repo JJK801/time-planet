@@ -9,11 +9,12 @@
   }
 
   .Hero {
-    min-height: 100vh;
+    min-height: calc(100vh - 64px);
     background-image: image-url("earth-globe-planet-45208.jpg");
     background-repeat: no-repeat;
     background-position: bottom -14rem right -15rem;
     line-height: 1.3;
+    padding-bottom: 4rem;
 
     @media (min-width: $breakpoint-md) {
       background-position: bottom right -5rem;

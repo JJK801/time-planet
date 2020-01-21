@@ -1,0 +1,16 @@
+<section class="DownloadBanner <%= yield(:banner_classes) %>">
+  <div class="container DownloadBanner-content">
+    <div class="DownloadBanner-icon">
+      <i class="material-icons">public</i>
+    </div>
+    <div>
+      <span class="DownloadBanner-text">
+        Des questions sur notre action ?
+      </span>
+      <%= link_to 'Téléchargez notre dossier d’investissement pour la planète.',
+        'https://automate-me.typeform.com/to/ZOmH5m',
+        target: '_blank',
+        class: 'DownloadBanner-link' %>
+    </div>
+  </div>
+</section>

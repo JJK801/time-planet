@@ -6,7 +6,8 @@ export default class extends Controller {
 
   connect() {
     this.hamburgerActiveClass = 'is-active';
-    this.darkModeClass = 'Navbar--dark';
+    this.stickyMenuClass = 'Navbar--sticky';
+    this.darkMenuClass = 'Navbar--dark';
     this.menuOpenClass = 'Navbar--menuOpen';
     this.toggleDarkModeOnScroll();
     clearAllBodyScrollLocks();
@@ -18,7 +19,7 @@ export default class extends Controller {
       this.element.classList.remove(this.menuOpenClass);
       this.hamburgerTarget.classList.remove(this.hamburgerActiveClass);
       if (this.isWindowAtTheTop()) {
-        this.element.classList.remove(this.darkModeClass);
+        this.element.classList.remove(this.darkMenuClass);
       }
     }
   }
@@ -27,9 +28,9 @@ export default class extends Controller {
     if (this.element.classList.contains('Navbar--notSticky')) {
       return;
     } else if (!this.isWindowAtTheTop()) {
-      this.element.classList.add(this.darkModeClass);
+      this.element.classList.add(this.stickyMenuClass, this.darkMenuClass);
     } else {
-      this.element.classList.remove(this.darkModeClass);
+      this.element.classList.remove(this.stickyMenuClass, this.darkMenuClass);
     }
   }
 
@@ -38,18 +39,18 @@ export default class extends Controller {
   }
 
   isWindowAtTheTop() {
-    return window.scrollY < 10;
+    return window.scrollY < 64;
   }
 
   toggleMenu() {
     const isClosingMenu = this.isMenuOpen();
     this.hamburgerTarget.classList.toggle(this.hamburgerActiveClass);
     this.element.classList.toggle(this.menuOpenClass);
-    if (!this.element.classList.contains(this.darkModeClass)) {
-      this.element.classList.add(this.darkModeClass);
+    if (!this.element.classList.contains(this.darkMenuClass)) {
+      this.element.classList.add(this.darkMenuClass);
     }
     if (isClosingMenu && this.isWindowAtTheTop()) {
-      this.element.classList.remove(this.darkModeClass);
+      this.element.classList.remove(this.darkMenuClass);
     }
     this.toggleScrollOnBody(isClosingMenu);
   }
