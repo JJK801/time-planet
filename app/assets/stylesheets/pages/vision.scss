@@ -47,6 +47,11 @@
   .Navbar-cta {
     color: $planet-black;
     border-bottom-color: $planet-black;
+
+    @media (min-width: $breakpoint-md) {
+      color: $white;
+      border-bottom-color: $white;
+    }
   }
 
   .Banner {
