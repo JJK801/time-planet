@@ -2,7 +2,7 @@
 
   .Cta {
     position: fixed;
-    top: 0;
+    bottom: 0;
     left: 0;
     right: 0;
     z-index: 3;
@@ -10,16 +10,16 @@
     border-radius: 0;
     width: 100%;
 
-    @media (min-width: $breakpoint-lg) {
+    @media (min-width: $breakpoint-md) {
       display: none;
     }
   }
 
-  .Navbar {
-    padding-top: 5rem;
+  .Footer {
+    padding-bottom: 6rem;
 
     @media (min-width: $breakpoint-lg) {
-      padding-top: 0;
+      padding-bottom: 2.5rem;
     }
   }
 
@@ -82,8 +82,6 @@
       }
     }
   }
-
-
 
   .Indicators {
     display: flex;
