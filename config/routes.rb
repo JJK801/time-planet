@@ -3,6 +3,7 @@ Rails.application.routes.draw do
 
   root 'pages#home'
   get 'vision', to: 'pages#vision'
+  get 'mentions-legales', to: 'pages#legal', as: 'legal'
   get 'devenir-associee', to: 'pages#become_associate', as: 'become_associate'
 
   post '/webhooks/prismic', to: 'webhooks#prismic'
