@@ -1,0 +1,72 @@
+---
+en:
+  home:
+    strat1:
+      paragraph1: "We are the last generation able to save the planet."
+      paragraph2: "We are fundraising <em>1&nbsp;billion euros</em> to create <em>100&nbsp;companies</em> fighting against the global warming."
+    strat2:
+      paragraph1: "The way we use our money, defines the world where we want to live."
+    key_points:
+      paragraph1: "Small steps are not enought."
+      paragraph2: "We are raising funds and builing entrepeurs team to create company to save the human kind."
+      bullet_points:
+        -
+          title: "Solutions"
+          paragraph: "To fight against Global warming, new solutions or existing one should be deployed quickly and massively in order to have a true impact."
+        -
+          title: "Entrepreneur"
+          paragraph: "The energy of entrepreneur should be 100% dedicated to save Mankind."
+        -
+          title: "Money"
+          paragraph: "We invest in companies able to reduce Mankind impact on climate."
+    projects:
+      paragraph1: "Without a radical & global economical & technological change, our civilisation will die."
+      paragraph2: "6 examples of companies that we will create. Each one will have a fundamental impact on global warning"
+      grid:
+        -
+          href: ""
+          picture_url: "stockage-electricite-par-gravite.jpg"
+          picture_alt: "Stockage électricité par gravité"
+          title: "Mankind Energy"
+          text: "Electric Storage system without metal, a definitive alternative to fuel and all non renewable energy."
+        -
+          href: ''
+          picture_url: 'dirigeable-capture-co2.png'
+          picture_alt: 'Dirigeable capture CO2'
+          title: "Carbon Capture"
+          text: "Ballons dirigeables placés au dessus des grandes villes pour capturer le CO2 avant qu’il ne se disperse dans l'atmosphère."
+        -
+          href: ''
+          picture_url: 'stockage-adn.jpg'
+          picture_alt: 'Stockage de données sur ADN'
+          title: "DNA Storage"
+          text: "Register digital datas on Sinthesis ADN."
+        -
+          href: ''
+          picture_url: 'banque-ethique.jpg'
+          picture_alt: 'Banque éthique'
+          title: "TP Bank"
+          text: "Bank dedicated to stabilize financial system. Bank with warranty of secure, rational & etical use of customers funds.."
+        -
+          href: ''
+          picture_url: 'maison-impression-3D.jpg'
+          picture_alt: 'Maison impression 3D'
+          title: "Liv’In"
+          text: "3D Printing technologie."
+        -
+          href: ''
+          picture_url: 'climatisation-sans-electricite.jpg'
+          picture_alt: 'Climatisation sans électricité'
+          title: "Clim’Planet"
+          text: "Cooling system without electricity."
+    engagement:
+      paragraph1: "Our Motivation: To save the planet."
+      paragraph2: "Time for the planet will not distribute any dividend to his shareholders or managers. Our account will be public."
+      paragraph3: "Benefits from the different companies will go to Time for the planet and will allow to create new companies."
+    together:
+      paragraph1: "We will succeed all together or we will failed."
+      paragraph2: "Companies created by Time for the Planet will share all their developments: Open source principle."
+      paragraph3: "Whatever discovery and development from our companies, will be public and massively shared even with our competitors. Mankind will be the winner whatever is the orign of a solution to climate change. It is not any more the moment to compete but to cooperate."
+    contact:
+      paragraph: "An idea, a question, you want to contribute financially ? you want to be involved ? Contact us !"
+      button: 'Contact with "Time for the Planet"'

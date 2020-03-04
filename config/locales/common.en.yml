@@ -1,0 +1,15 @@
+---
+en:
+  common:
+    convention: "Charte"
+    act: "I act"
+    up: "Top"
+    back: "Back"
+    become_associate: 
+      cta: "I become a shareholder"
+      why: "Why become a shareholder ?"
+      status: "Shareholder rights"
+      list: "Les associé·es"
+    download:
+      headline: "Des questions sur notre action ?"
+      link: "Téléchargez notre dossier d’investissement pour la planète."

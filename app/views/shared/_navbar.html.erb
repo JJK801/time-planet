@@ -12,30 +12,30 @@
           <span class="hamburger-inner"></span>
         </span>
     </button>
-    <a href="/" class="Navbar-logoContainer">
+    <%= link_to root_path, class: 'Navbar-logoContainer' do %>
       <%= embedded_svg 'logo-time-planet.svg', class: "Navbar-logo" %>
       Time for the Planet
-    </a>
+    <% end %>
     <div class="Navbar-links">
-      <%= link_to 'charte', vision_path, class: 'Button Navbar-link Navbar-linkDesktop' %>
+      <%= link_to t('common.convention'), vision_path, class: 'Button Navbar-link Navbar-linkDesktop' %>
 
       <% if request.path == become_associate_path %>
         <%= render 'shared/associate_cta', class_name: 'AssociateCta' %>
       <% else %>
-        <a href="/devenir-associee" class="Navbar-cta Button Button--underlined">
-          J'agis <i class="material-icons">arrow_forward</i>
-        </a>
+        <%= link_to become_associate_path, class: 'Navbar-cta Button Button--underlined' do %>
+          <%= t('common.act') %> <i class="material-icons">arrow_forward</i>
+        <% end %>
       <% end %>
     </div>
   </div>
     <ul class="Navbar-mobileLinks">
       <li>
-        <%= link_to 'charte', vision_path, class: 'Button Navbar-link' %>
+        <%= link_to t('common.convention'), vision_path, class: 'Button Navbar-link' %>
       </li>
       <li>
-        <a href="/devenir-associee" class="Navbar-cta Button Button--underlined">
-          J'agis <i class="material-icons">arrow_forward</i>
-        </a>
+        <%= link_to become_associate_path, class: 'Navbar-cta Button Button--underlined' do %>
+          <%= t('common.act') %> <i class="material-icons">arrow_forward</i>
+        <% end %>
       </li>
     </ul>
 </nav>

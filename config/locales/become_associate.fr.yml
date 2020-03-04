@@ -1,0 +1,52 @@
+---
+fr:
+  become_associate:
+    summary:
+      title: "Devenir associé·e"
+      paragraph1: "Aidez-nous à réunir 1 milliard d’euros pour créer 100 entreprises luttant contre le dérèglement climatique."
+      paragraph2: "Chaque part peut être achetée pour 1 euro."
+      link: "En savoir plus sur le statut d’associé·e."
+      counters:
+        amount: "déjà rassemblés"
+        followers: "soutiens"
+        elapsed_time: "jours depuis le début"
+      steps:
+        -
+          amount: 300000
+          name: "Premier Palier"
+          illustration: 'climatisation-sans-electricite.jpg'
+          description: "Pour atteindre 1 milliard d’euros, nous devons commencer par prouver que nous sommes capables de rassembler, en très peu de temps, une somme minimale de 300 000€. Elle nous permettra de financer une grande campagne de communication ainsi qu’une première création d’entreprise luttant contre le changement climatique."
+    engagements:
+      -
+        title: "Agir en grand"
+        description: "S’investir dans un projet capable de changer la face du monde."
+      -
+        title: "Efficacité"
+        description: "Votre argent est le moyen pour Time for the Planet de créer des entreprises qui travaillent au sauvetage de la planète."
+      -
+        title: "Une mission pour le monde"
+        description: "Le seul objectif de Time for the Planet est la sauvegarde de la planète. Nos bénéfices servent exclusivement cette cause. Nous ne rémunérons aucun actionnaire."
+      -
+        title: "Transparence"
+        description: "Tous nos comptes sont publics. Tous nos brevets sont mis à disposition de toutes et tous sans contrepartie."
+    how_to:
+      title: "Comment devenir associé·e ?"
+      paragraphs:
+        - "La société est en cours de modification pour permettre d'accueillir plus d'associé·es. En attendant, vous pouvez montrer votre soutien au projet en manifestant votre volonté de devenir associé·e. De cette façon, vous nous permettez d'avoir plus de poids lorsque nous recontrons des décideurs et des financiers."
+        - "La société Time for the Planet sera découpée en 1 milliard de parts, toutes numérotées. Une part coûtera 1 euro."
+        - "Vous pourrez acheter le nombre de parts que vous souhaitez, mais également en racheter à tout moment dans le futur (tant qu’il y en a&nbsp;!)"
+      title2: "Etre associé·e me donne quels droits ?"
+      bullet_points:
+        -
+          title: "Droit de vote"
+          description: "Vous pouvez voter ou être candidat·e au board, organe de décision de Time for the Planet, selon le principe de 1 personne = 1 voix"
+        -
+          title: "Participation"
+          description: "Vous pouvez créer des événements au nom de Time for the planet, en devenant un·e référent·e “Team for the Planet”."
+        -
+          title: "Time for the Planet, c’est vous"
+          description: "Vous êtes propriétaire d’une partie de l’entreprise."
+    list:
+      title: "Les dernier·es futur·es associé·es"
+      template1: "<b>%{name}</b> s'est engagé·e à acquérir <b>%{nb_parts}</b> parts"
+      template2: "il y a %{time}"

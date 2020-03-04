@@ -8,25 +8,26 @@
   <div class="container">
     <div class="row">
       <div class="col-md-6">
-        <h1 class="Base-title Base-title--1 Base-title--1 Base-title--noMarginBottom">Devenir associé·e</h1>
+        <h1 class="Base-title Base-title--1 Base-title--1 Base-title--noMarginBottom">
+          <%= raw t('become_associate.summary.title') %>
+        </h1>
         <p class="Base-subtitle Base-subtitle--verySmall">
-          Aidez-nous à réunir 1 milliard d’euros pour créer 100 entreprises luttant
-          contre le dérèglement climatique.
+          <%= raw t('become_associate.summary.paragraph1') %>
         </p>
         <p class="Base-text">
-          Chaque part peut être achetée pour 1 euro.
-          <a href="#associate-status" class="Link">En savoir plus sur le statut d’associé·e.</a>
+          <%= raw t('become_associate.summary.paragraph2') %>
+          <%= link_to t('become_associate.summary.link'), '#associate-status', data: { action: 'content-navbar#scroll' }, class: "Link" %>
         </p>
       </div>
       <div class="col-md-5 offset-md-1">
         <div class="Indicators">
           <div class="Indicators-item">
-            <p class="Base-title Base-title--2"><%= number_with_delimiter(@associates_update.total_raised, locale: :fr) %>&nbsp;€</p>
-            <p class="Base-text">déjà rassemblés</p>
+            <p class="Base-title Base-title--2"><%= number_to_currency(@associates_update.total_raised, locale: :fr, precision: 0) %></p>
+            <p class="Base-text"><%= raw t('become_associate.summary.counters.amount') %></p>
           </div>
           <div class="Indicators-item">
-            <p class="Base-title Base-title--2"><%= number_with_delimiter(@associates_update.total_associates, locale: :fr) %></p>
-            <p class="Base-text">soutiens</p>
+            <p class="Base-title Base-title--2"><%= number_to_human(@associates_update.total_associates, locale: :fr) %></p>
+            <p class="Base-text"><%= raw t('become_associate.summary.counters.followers') %></p>
           </div>
         </div>
         <div class="Indicators">
@@ -34,33 +35,36 @@
             <p class="Base-title Base-title--2 Base-title--noMarginTop">
               <%= (Date.today - Date.parse('05-12-2019')).to_i  %>
             </p>
-            <p class="Base-text">jours depuis le début</p>
+            <p class="Base-text"><%= raw t('become_associate.summary.counters.elapsed_time') %></p>
           </div>
         </div>
       </div>
     </div>
+    <%
+    steps = t('become_associate.summary.steps').sort_by { |step| step[:amount] }
+    current_step = steps.filter { |step| step[:amount] > @associates_update.total_raised }.first || steps.last
+    %>
     <div class="Scale">
       <div class="Scale-container">
         <span class="Scale-cursor" style="width: <%= "#{@associates_update.step_percentage}%" %>;"></span>
       </div>
       <div class="Scale-legend">
-        300 000 €
+        <%= number_to_currency(current_step[:amount], locale: :fr, precision: 0) %>
       </div>
     </div>
-    <div class="Step PictureCard">
-      <%= image_tag 'climatisation-sans-electricite.jpg', class: 'PictureCard-image' %>
-      <div class="PictureCard-content">
-        <h4 class="PictureCard-title PictureCard-title--downcase">
-          <b>Premier Palier: 300 000 €</b>
-        </h4>
-        <p class="PictureCard-text">
-          Pour atteindre 1 milliard d’euros, nous devons commencer par prouver que nous sommes capables de
-          rassembler, en très peu de temps, une somme minimale de 300 000€. Elle nous permettra de financer
-          une grande campagne de communication ainsi qu’une première création d’entreprise luttant contre
-          le changement climatique.
-        </p>
+    <% steps.each do |step| %>
+      <div class="Step PictureCard">
+        <%= image_tag step[:illustration], class: 'PictureCard-image' %>
+        <div class="PictureCard-content">
+          <h4 class="PictureCard-title PictureCard-title--downcase">
+            <b><%= step[:name] %> : <%= number_to_currency(step[:amount], locale: :fr, precision: 0) %></b>
+          </h4>
+          <p class="PictureCard-text">
+            <%= raw step[:description] %>
+          </p>
+        </div>
       </div>
-    </div>
+    <% end %>
   </div>
 </div>
 
@@ -68,17 +72,10 @@
 
 <div class="Section Section--lagoon SecondSection" id="why">
   <div class="container">
-    <p class="Base-title Base-title--2">Agir en grand</p>
-    <p class="Base-subtitle">S’investir dans un projet capable de changer la face du monde.</p>
-    <p class="Base-title Base-title--2">Efficacité</p>
-    <p class="Base-subtitle">Votre argent est le moyen pour Time for the Planet de créer des entreprises
-      qui travaillent au sauvetage de la planète.</p>
-    <p class="Base-title Base-title--2">Une mission pour le monde</p>
-    <p class="Base-subtitle">Le seul objectif de Time for the Planet est la sauvegarde de la planète.
-      Nos bénéfices servent exclusivement cette cause. Nous ne rémunérons aucun actionnaire.</p>
-    <p class="Base-title Base-title--2">Transparence</p>
-    <p class="Base-subtitle">Tous nos comptes sont publics. Tous nos brevets sont mis à disposition de
-      toutes et tous sans contrepartie.</p>
+    <% t('become_associate.engagements').each do |engagement| %>
+      <p class="Base-title Base-title--2"><%= raw engagement[:title] %></p>
+      <p class="Base-subtitle"><%= raw engagement[:description] %></p>
+    <% end %>
   </div>
 </div>
 
@@ -86,32 +83,19 @@
   <div class="container">
     <div class="row">
       <div class="col-md-5">
-        <h2 class="Base-subtitle">Comment devenir associé·e ?</h2>
-        <p class="Base-title Base-title--4">La société est en cours de modification pour permettre d'accueillir
-        plus d'associé·es. En attendant, vous pouvez montrer votre soutien au projet en manifestant votre volonté
-        de devenir associé·e. De cette façon, vous nous permettez d'avoir plus de poids lorsque nous recontrons
-        des décideurs et des financiers.</p>
-        <p class="Base-title Base-title--4">La société Time for the Planet sera découpée en 1 milliard de parts, toutes
-          numérotées. Une part coûtera 1 euro.</p>
-        <p class="Base-title Base-title--4">Vous pourrez acheter le nombre de parts que vous souhaitez, mais également
-          en racheter à tout moment dans le futur (tant qu’il y en a&nbsp;!)</p>
+        <h2 class="Base-subtitle"><%= raw t('become_associate.how_to.title') %></h2>
+        <% t('become_associate.how_to.paragraphs').each do |p| %>
+          <p class="Base-title Base-title--4"><%= raw p %></p>
+        <% end %>
       </div>
       <div class="col-md-4 offset-md-2 Section-text--twoColorsRight">
-        <h2 class="Base-subtitle">Etre associé·e me donne quels droits ?</h2>
-        <h3 class="Base-title Base-title--3">Droit de vote</h3>
-        <p class="Base-text Base-text--withSeparator">
-          Vous pouvez voter ou être candidat·e au board, organe de décision de Time for the Planet, selon le
-          principe de 1 personne = 1 voix
-        </p>
-        <h3 class="Base-title Base-title--3">Participation</h3>
-        <p class="Base-text Base-text--withSeparator">
-          Vous pouvez créer des événements au nom de Time for the planet, en devenant un·e référent·e
-          “Team for the Planet”.
-        </p>
-        <h3 class="Base-title Base-title--3">Time for the Planet, c’est vous</h3>
-        <p class="Base-text Base-text--withSeparator">
-          Vous êtes propriétaire d’une partie de l’entreprise.
-        </p>
+        <h2 class="Base-subtitle"><%= t('become_associate.how_to.title2') %></h2>
+        <% t('become_associate.how_to.bullet_points').each do |bullet_point| %>
+          <h3 class="Base-title Base-title--3"><%= raw bullet_point[:title] %></h3>
+          <p class="Base-text Base-text--withSeparator">
+            <%= raw bullet_point[:description] %>
+          </p>
+        <% end %>
       </div>
     </div>
   </div>
@@ -121,16 +105,16 @@
   <div class="container">
     <div class="row">
       <div class="col-md-4 offset-md-4">
-        <h2 class="Base-title Bast-title--2">Les dernier·es futur·es associé·es</h2>
+        <h2 class="Base-title Bast-title--2"><%= raw t( 'become_associate.list.title') %></h2>
         <% 3.times do |index| %>
           <p class="Base-text Base-text--withSeparator">
-            <b><%= @associates_update.public_send("last_associate_name_#{index + 1}") %></b>
-            s'est engagé·e à acquérir
-            <b><%= @associates_update.public_send("last_associate_shares_#{index + 1}") %></b>
-            parts
+            <%= raw t(
+              'become_associate.list.template1', 
+              name: @associates_update.public_send("last_associate_name_#{index + 1}"),
+              nb_parts: @associates_update.public_send("last_associate_shares_#{index + 1}")
+            ) %>
             <% if @associates_update.public_send("last_associate_date_#{index + 1}").present? %>
-              il y a
-              <%= time_ago_in_words(@associates_update.public_send("last_associate_date_#{index + 1}")) %>.
+              <%= raw t('become_associate.list.template2', time: time_ago_in_words(@associates_update.public_send("last_associate_date_#{index + 1}"))) %>.
             <% end %>
           </p>
         <% end %>

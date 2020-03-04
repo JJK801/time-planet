@@ -1,0 +1,73 @@
+---
+fr:
+  home:
+    strat1:
+      paragraph1: "Nous sommes la dernière génération capable de sauver la planète."
+      paragraph2: "Nous rassemblons <em>1&nbsp;milliard d'euros</em> pour créer <em>100&nbsp;entreprises</em> luttant contre le réchauffement climatique."
+    strat2:
+      paragraph1: "La façon dont nous utilisons notre argent définit le monde dans lequel nous voulons vivre."
+      paragraph2: "Nous sommes une société à but non lucratif qui crée et finance des entreprises luttant à l’échelle mondiale <em>contre le dérèglement climatique.</em>"
+    key_points:
+      paragraph1: "Les petits gestes ne suffisent pas."
+      paragraph2: "Nous rassemblons de l’argent et des équipes d’entrepreneurs pour créer des entreprises visant la sauvegarde de l’humanité."
+      bullet_points:
+        -
+          title: "Des solutions"
+          paragraph: "Afin de lutter contre le réchauffement climatique des solutions nouvelles ou déjà existantes doivent être déployées rapidement et massivement afin d'avoir un réel impact."
+        -
+          title: "Des entrepreneurs"
+          paragraph: "L’énergie des créateurs d’entreprise doit être consacrée à 100% à la sauvegarde de la civilisation humaine."
+        -
+          title: "De l'argent"
+          paragraph: "Nous investissons dans les entreprises capables de réduire l'impact de l'humanité sur le climat."
+    projects:
+      paragraph1: "Sans changement radical, économique et technologique à l’échelle mondiale, notre civilisation va s'éteindre."
+      paragraph2: "Voici 6 exemples d’entreprises que nous allons créer. Chacune d’entre elles aura un impact fondamental contre le réchauffement climatique, à l’échelle mondiale."
+      grid:
+        -
+          href: ""
+          picture_url: "stockage-electricite-par-gravite.jpg"
+          picture_alt: "Stockage électricité par gravité"
+          title: "Mankind Energy"
+          text: "Système de stockage de l’électricité sans métal, pour une alternative définitive au pétrole et à toutes les énergies non renouvelables."
+        -
+          href: ''
+          picture_url: 'fumee-cheminee-sur-ciel-bleu.jpg'
+          picture_alt: 'Capture du CO2 dans la fumée des cheminées d'usine'
+          title: "Carbon Capture"
+          text: "Captation du CO2 à la sortie des cheminées d’usines pour l’enfouir dans le sol de façon sécurisée et durable."
+        -
+          href: ''
+          picture_url: 'stockage-adn.jpg'
+          picture_alt: 'Stockage de données sur ADN'
+          title: "DNA Storage"
+          text: "Enregistrer les données informatiques sur de l’ADN de synthèse, pour stocker l’ensemble des données du monde avec très peu d'utilisation d'énergie."
+        -
+          href: ''
+          picture_url: 'banque-ethique.jpg'
+          picture_alt: 'Banque éthique'
+          title: "TP Bank"
+          text: "Banque dédiée à la stabilité du système financier, qui garantie une utilisation sécurisée, rationnelle et éthique de l’argent de ses clients."
+        -
+          href: ''
+          picture_url: 'maison-impression-3D.jpg'
+          picture_alt: 'Maison impression 3D'
+          title: "Liv’In"
+          text: "Technologie de construction en impression 3D du gros-oeuvre de bâtiments à base de matériaux 100% naturels."
+        -
+          href: ''
+          picture_url: 'climatisation-sans-electricite.jpg'
+          picture_alt: 'Climatisation sans électricité'
+          title: "Clim’Planet"
+          text: "Climatisation fonctionnant sans électricité."
+    engagement:
+      paragraph1: "Notre motivation : la sauvegarde de la planète."
+      paragraph2: "Time for the Planet ne distribue aucun dividende à ses actionnaires ou à ses dirigeants. Nos comptes sont publics."
+      paragraph3: "Les bénéfices générés par les entreprises que nous créons reviennent à Time for the Planet, et permettent de créer de nouvelles entreprises."
+    together:
+      paragraph1: "Nous réussirons ce défi tous ensemble, ou nous échouerons."
+      paragraph2: "Les entreprises créées par Time for the Planet rendront publiques toutes leurs découvertes, selon le principe de l'open-source."
+      paragraph3: "Tout ce que nos entreprises découvrent et développent sera public et partagé massivement, même avec nos concurrents. L’humanité est gagnante quelle que soit l’origine d’une solution au dérèglement climatique. Le temps n’est plus à la concurrence, mais à la coopération."
+    contact:
+      paragraph: "Une idée, une question, une envie de s'engager financièrement ou humainement ? Contactez-nous !"
+      button: "Contacter Time for the Planet"

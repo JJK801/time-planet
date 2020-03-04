@@ -1,0 +1,49 @@
+---
+fr:
+  vision:
+    header:
+      title: "Our Vision"
+      subtitle: "Our statement: the absolute emergency of the environmental crisis"
+      description: "<strong>We evaluate that Mankind is in extreme emergency situation.</strong><br /> The accelerated degradation of animal and plant species, and the global warming caused by human activity, poses a major risk of extinction of Life on Earth. Scientists have been alerting us for 50 years on this subject. It is now absolutely necessary to act."
+    engagement:
+      -
+        title: "The power of entrepreneurship"
+        subtitle: "We want to bring the entrepreneurship strenghs to fight with any citizen engaged in this cause trough associationn or politics."
+        description: "Entrepreneurship refers to a capacity to put into action. Its ability to deploy solutions quickly, its political and financial independence and its culture of invention, are tools that must be resolutely used to safeguard the Planet."
+      -
+        title: "Non-lucrativity"
+        subtitle: "We are fully committed to devoting all the human and financial resources at our disposal to solve this ecological crisis."
+        description: "Time for the Planet and all of its partners renounce, in their statutes, to share any profits generated. All profits will be devoted to improving, accessibility and developing solutions."
+    banner:
+      title: "Create and finance global companies that will fight against climate change"
+      subtitle: "This is how we definte our role&nbsp;:"
+      bullet_points:
+        - "Find inventions solving environmental problems (scientific engineering)"
+        - "Set up and train teams to deploy and develop those new discoveries (Human engineering)"
+        - "Fund raising to finance the creation of new companies & the reseach (financial engineering)"
+    values1:
+      -
+        title: "Open Source"
+        subtitle: "We must share our reasearch, knowledge and expertise."
+        description: "To increase the chances of developing a technical solution, we use the principle of sharing these solutions according to the rules of open source. Anyone in the world will be able to access these solutions for free and use them."
+      -
+        title: "Collective intelligence"
+        subtitle: "We believe that we need everyone for that mission and we want to use collective intelligence as required tool to achieve it."
+        description: "Our action is multiplied by calling on everyone to help us. This happens by introducing us to an invention, offering us skills, expertise or material and financial means."
+    values2:
+      title: "Goodwill"
+      paragraphs:
+        - "<strong>Our way of driving energy: frankness, humour and goodwill.</strong>"
+        - "We want to be surrounded by people who are optimistic, hard-working, persevering, and committed to the common good. To do this, we cultivate a culture based on extreme trust, frankness and the dedramatization of situations. Humor is an important part of our daily lives."
+        - "We are extremely frank with ourself and with external people that we support."
+        - "Finally, goodwill is the backbone of our business. It is about giving everyone confidence in principle, and only removing it if objective facts lead us to do so. We never interpret the words of un.es and others. We assume that they do not imply anything, and that only what is said objectively must be taken into account."
+    values3:
+      -
+        title: "Transparency"
+        subtitle: "We claim the need of full transparency in business."
+        description: "By our commitments,we consider ourselves indebted to everyone involded in such project. Salaries & accounts of Time for the planet will be free of access. Moreover, everyone can become shaareholder for 1 euro and could participate according to this principle: one person, one vote."
+      -
+        title: "Ethic"
+        subtitle: "We act in line with the fairer world we believe in."
+        description: "In each of our actions, we intend to actively ensure: gender equality, non-discrimination, impact on the environment, fight against all forms of harassment and all forms of human traffick."
+

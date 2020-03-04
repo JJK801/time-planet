@@ -5,14 +5,13 @@
   <div class="container">
     <div class="row">
       <div class="col-md-5">
-        <h1 class="Base-title Base-title--1">Notre vision</h1>
+        <h1 class="Base-title Base-title--1"><%= raw t('vision.header.title') %></h1>
         <p class="Base-subtitle Base-subtitle--bold Base-subtitle--smaller">
-          Notre constat : l’urgence absolue de la crise environnementale
+          <%= raw t('vision.header.title') %>
         </p>
-        <p><strong>Nous considérons que l’Humanité est dans une situation d’urgence vitale absolue.</strong><br>
-          La dégradation accélérée des espèces animales et végétales, accompagnée d’un réchauffement climatique
-          causé par l’activité humaine, fait courir un risque majeur d’extinction de la Vie sur Terre.
-          Les scientifiques nous alertent depuis 50 ans sur ce sujet. Il est désormais absolument nécessaire d’agir.</p>
+        <p>
+          <%= raw t('vision.header.description') %>
+        </p>
       </div>
     </div>
     <div class="Header-image"></div>
@@ -23,76 +22,51 @@
 <div class="Section Section--white">
   <div class="container">
     <div class="row">
+      <% t('vision.engagement').each do |block| %>
       <div class="col-md-6">
-        <h2 class="Base-title Base-title--2">La puissance de l’entrepreneuriat</h2>
+        <h2 class="Base-title Base-title--2">
+          <%= raw block[:title] %>
+        </h2>
         <p>
           <strong>
-            Nous voulons ajouter les forces de l'entreprenariat pour agir aux côtés de celles et ceux
-            qui s’engagent activement en tant que citoyen.nes, associations ou politiques.
+            <%= raw block[:subtitle] %>
           </strong><br>
-          L'entrepreneuriat désigne une capacité de mise en action. Son aptitude à déployer rapidement
-          des solutions, son indépendance politique et financière et sa culture de l’invention sont des
-          outils devant résolument être utilisés pour la sauvegarde de la Planète.
+          <%= raw block[:description] %>
         </p>
       </div>
-      <div class="col-md-6">
-        <h2 class="Base-title Base-title--2">Non-lucrativité</h2>
-        <p>
-          <strong>
-            Nous nous engageons sans réserve à consacrer tous les moyens humains et financiers dont
-            nous disposons à la résolution de cette crise écologique.
-          </strong><br>
-          Time for the Planet et l’ensemble de ses associé.es renoncent, dans leurs statuts, à partager d’éventuels
-          profits générés. L’intégralité de ceux ci seront consacrés à l’amélioration, à l'accessibilité et
-          au développement des solutions.
-        </p>
-      </div>
+      <% end %>
     </div>
     <div class="row Banner">
       <div class="col-md-6">
         <p class="Base-subtitle Base-subtitle--bold Base-subtitle--smaller">
-          Création et financement d’entreprises de dimensions mondiales qui luttent contre le dérèglement climatique
+          <%= raw t('vision.banner.title') %>
         </p>
       </div>
       <div class="col-md-6">
-        <p><strong>Nous définissons notre rôle de la façon suivante&nbsp;:</strong></p>
+        <p><strong><%= raw t('vision.banner.subtitle') %></strong></p>
         <ul class="Banner-list">
+          <% t('vision.banner.bullet_points').each do |text| %>
           <li class="Banner-listItem">
-            Trouver des inventions pouvant contribuer à résoudre un problème environnemental (ingénierie scientifique)
+            <%= raw text %>
           </li>
-          <li class="Banner-listItem">
-            Constituer et former des équipes à mettre en oeuvre et développer ces inventions (ingénierie humaine)
-          </li>
-          <li class="Banner-listItem">
-            Rassembler des fonds pour financer la création d’entreprises et la recherche (ingénierie financière)
-          </li>
+          <% end %>
         </ul>
       </div>
     </div>
     <div class="row">
+      <% t('vision.values1').each do |block| %>
       <div class="col-md-6">
-        <h2 class="Base-title Base-title--2">Open Source</h2>
+        <h2 class="Base-title Base-title--2">
+          <%= raw block[:title] %>
+        </h2>
         <p>
           <strong>
-            Nous nous devons de partager nos recherches, connaissances et expertises.
+            <%= raw block[:subtitle] %>
           </strong><br>
-          Pour augmenter les chances de développement d’une solution technique, nous utilisons le principe du
-          partage de ces solutions selon les règles de l’open source. N’importe qui dans le monde pourra avoir
-          accès gratuitement à ces solutions et les utiliser.
+          <%= raw block[:description] %>
         </p>
       </div>
-      <div class="col-md-6">
-        <h2 class="Base-title Base-title--2">Intelligence collective</h2>
-        <p>
-          <strong>
-            Nous croyons à l’utilité de chacun.e dans cette mission et entendons utiliser l’intelligence collective
-            comme outil indispensable à son accomplissement.
-          </strong><br>
-          Notre action est démultipliée par le fait d’appeler chacun.e à nous aider.
-          Cela s’opère en nous faisant découvrir une invention, en nous proposant des compétences,
-          de l’expertise ou des moyens matériels et financiers.
-        </p>
-      </div>
+      <% end %>
     </div>
   </div>
 </div>
@@ -101,25 +75,14 @@
   <div class="container">
     <div class="row">
       <div class="col-md-4">
-        <h2 class="Base-title Base-title--2">Bienveillance</h2>
+        <h2 class="Base-title Base-title--2"><%= raw t('vision.values2.title') %></h2>
       </div>
       <div class="col-md-8">
-        <p><strong>Notre façon d’impulser l’énergie : franchise, humour et bienveillance.</strong></p>
+        <% t('vision.values2.paragraphs').each do |text| %>
         <p>
-          Nous voulons être entourés de personnes optimistes, travailleuses, persévérantes, et tournées vers le bien
-          commun. Pour cela, nous impulsons une culture basée sur la confiance extrême, la franchise et la
-          dédramatisation des situations. L’humour est une composante importante de notre quotidien.
+          <%= raw text %>
         </p>
-        <p>
-          Nous sommes extrêmement francs envers nous-même et envers les personnes extérieures qui nous
-          demandent conseils.
-        </p>
-        <p>
-          Enfin, la bienveillance est le pilier de notre entreprise. Elle consiste à accorder notre confiance
-          à tout le monde par principe, et la retirer uniquement si des faits objectifs nous y amènent.
-          Nous n’interprétons jamais les paroles des un.es et des autres. Nous partons du principe qu’elles
-          ne sous-entendent rien, et que seul ce qui est dit objectivement doit être pris en compte.
-        </p>
+        <% end %>
       </div>
     </div>
   </div>
@@ -128,28 +91,19 @@
 <div class="Section Section--white">
   <div class="container">
     <div class="row">
+      <% t('vision.values3').each do |block| %>
       <div class="col-md-6">
-        <h2 class="Base-title Base-title--2">Transparence</h2>
+        <h2 class="Base-title Base-title--2">
+          <%= raw block[:title] %>
+        </h2>
         <p>
           <strong>
-            Nous revendiquons la nécessité de la transparence dans le monde des entreprises.
+            <%= raw block[:subtitle] %>
           </strong><br>
-          De par nos engagements, nous nous considérons comme redevables auprès de toutes et tous.
-          Les salaires et comptes de Time for the Planet sont libres d’accès. De plus chacun.e peut devenir
-          associé.e pour un euro et participer au vote selon le principe “une personne, une voix”.
+          <%= raw block[:description] %>
         </p>
       </div>
-      <div class="col-md-6">
-        <h2 class="Base-title Base-title--2">Ethique</h2>
-        <p>
-          <strong>
-            Nous agissons en cohérence avec le monde plus juste auquel nous croyons.
-          </strong><br>
-          Dans chacunes de nos actions, nous entendons veiller activement à l’égalité femmes-hommes, à la
-          non discrimination, à l’impact de nos activités sur l’environnement, à la lutte contre toutes
-          les formes de harcèlement et contre toutes les formes de traites des êtres humains.
-        </p>
-      </div>
+      <% end %>
     </div>
   </div>
 </div>

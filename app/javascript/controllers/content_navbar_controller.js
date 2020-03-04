@@ -10,7 +10,7 @@ export default class extends Controller {
 
   scroll(event) {
     event.preventDefault();
-    const scrollToId = event.target.getAttribute('href').substr(1);
+    const scrollToId = event.target.closest('a').getAttribute('href').substr(1);
 
     const navbarOffset = 72; // 4.5rem
     const scrollToPosition = document.getElementById(scrollToId).offsetTop;

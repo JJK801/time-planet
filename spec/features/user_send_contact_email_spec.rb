@@ -5,7 +5,7 @@ feature 'contact page' do
   let(:message) { FactoryBot.build(:message) }
 
   scenario 'user send email successfully' do
-    visit contact_path
+    visit contact_path({ locale: :fr })
 
     fill_in 'message[sender_first_name]', with: message.sender_first_name
     fill_in 'message[sender_last_name]', with: message.sender_last_name
@@ -18,7 +18,7 @@ feature 'contact page' do
   end
 
   scenario 'user cannot submit because of empty first name' do
-    visit contact_path
+    visit contact_path({ locale: :fr })
 
     fill_in 'message[sender_last_name]', with: message.sender_last_name
     fill_in 'message[sender_email]', with: message.sender_email
@@ -31,7 +31,7 @@ feature 'contact page' do
   end
 
   scenario 'user cannot submit because of empty last name' do
-    visit contact_path
+    visit contact_path({ locale: :fr })
 
     fill_in 'message[sender_first_name]', with: message.sender_first_name
     fill_in 'message[sender_email]', with: message.sender_email
@@ -44,7 +44,7 @@ feature 'contact page' do
   end
 
   scenario 'user cannot submit because of empty email' do
-    visit contact_path
+    visit contact_path({ locale: :fr })
 
     fill_in 'message[sender_first_name]', with: message.sender_first_name
     fill_in 'message[sender_last_name]', with: message.sender_last_name
@@ -57,7 +57,7 @@ feature 'contact page' do
   end
 
   scenario 'user cannot submit because of invalid email' do
-    visit contact_path
+    visit contact_path({ locale: :fr })
 
     fill_in 'message[sender_first_name]', with: message.sender_first_name
     fill_in 'message[sender_last_name]', with: message.sender_last_name
@@ -71,7 +71,7 @@ feature 'contact page' do
   end
 
   scenario 'user cannot submit because of empty body' do
-    visit contact_path
+    visit contact_path({ locale: :fr })
 
     fill_in 'message[sender_first_name]', with: message.sender_first_name
     fill_in 'message[sender_last_name]', with: message.sender_last_name
@@ -85,7 +85,7 @@ feature 'contact page' do
 
   context 'js validation' do
     scenario 'user should have immediate feedback on input when wrong', js: true do
-      visit contact_path
+      visit contact_path({ locale: :fr })
 
       fill_in 'message[sender_email]', with: 'wrong_email'
       page.find("body").click

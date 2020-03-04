@@ -1,18 +1,16 @@
 <div class="Section Section--darkGreen AssociateForm" data-target="associate-form.form">
   <div class="AssociateForm-closeContainer">
     <button class="Button AssociateForm-close" data-action="associate-form#closeForm">
-      retour <i class="material-icons">clear</i>
+      <%= raw t('common.back') %> <i class="material-icons">clear</i>
     </button>
   </div>
   <div class="container AssociateForm-container" data-target="associate-form.container">
     <%= image_tag 'certificat.jpg', class: 'AssociateForm-image' %>
     <p class="Base-subtitle">
-      Dans 2 minutes, vous aurez validé votre intention d'acquisition des premières actions de Time for the Planet,
-      pour lutter à grande échelle contre le dérèglement climatique.
+      <%= raw t('associate_form.intro') %>
     </p>
     <p class="">
-      La société est actuellement en cours de modification pour nous permettre d'accueillir plus d'associé·es. 
-      Dès qu'elle sera prête, nous vous recontacterons pour confirmer votre intention et régler l'achat de vos parts.
+      <%= raw t('associate_form.reservation') %>
     </p>
     <form class="Form AssociateForm-form"
           id="associate"
@@ -22,7 +20,7 @@
           accept-charset="UTF-8">
       <input name="utf8" type="hidden" value="✓">
       <div class="Form-field email required associate_email">
-        <label class="email required Form-label" for="associate_email">Votre email (requis)</label>
+        <label class="email required Form-label" for="associate_email"><%= raw t('associate_form.form.email') %></label>
         <input class="Form-input string email required Form-input"
                data-action="blur->form#validate"
                data-target="associate-form.email"
@@ -36,7 +34,7 @@
           class:'Button Button--box AssociateForm-submit',
           target: "_blank",
           data: { target: 'associate-form.link', action: 'associate-form#validate' } do %>
-        C'est parti
+        <%= raw t('associate_form.form.submit') %>
       <% end %>
     </form>
   </div>

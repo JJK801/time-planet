@@ -18,15 +18,17 @@
         <div class="row">
           <div class="col-md-4 Footer-column">
             <%#= link_to 'projets', projects_path, class:'Button Footer-link' %>
-            <%= link_to 'charte', vision_path, class:'Button Footer-link' %>
-            <%= link_to "J'agis", become_associate_path, class:'Button Footer-link' %>
+            <%= link_to t('common.convention'), vision_path, class: 'Button Footer-link' %>
+            <%= link_to t('common.act'), become_associate_path, class:'Button Footer-link' %>
           </div>
           <div class="col-md-5">
-            <%= link_to 'contact', contact_path, class:'Button Footer-link' %>
+            <%= link_to t('common.contact'), contact_path, class:'Button Footer-link' %>
             <%= link_to 'mentions légales', legal_path, class:'Button Footer-link' %>
           </div>
           <div class="col-md-3">
-            <a href="/" class="Button Button--underlined">Retour <i class="material-icons">arrow_upward</i></a>
+            <%= link_to url_for(params.permit.merge(only_path: true)), class:'Button Button--underlined' do %>
+              <%= t('common.up') %> <i class="material-icons">arrow_upward</i>
+            <% end %>
           </div>
         </div>
       </div>

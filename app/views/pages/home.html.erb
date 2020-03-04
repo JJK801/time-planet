@@ -8,15 +8,14 @@
     <div class="row">
       <div class="col-md-6 col-lg-6">
         <p class="Base-subtitle">
-          Nous sommes la dernière génération capable de sauver la planète.
+          <%= raw t('home.strat1.paragraph1') %>
         </p>
       </div>
     </div>
     <div class="row">
       <div class="col-md-10 col-lg-9">
-        <h1 class="Base-title Base-title--1 Hero-title">Nous rassemblons
-          <em>1&nbsp;milliard d'euros</em> pour créer <em>100&nbsp;entreprises</em> luttant contre
-          le réchauffement climatique.
+        <h1 class="Base-title Base-title--1 Hero-title">
+          <%= raw t('home.strat1.paragraph2') %>
         </h1>
       </div>
     </div>
@@ -29,13 +28,12 @@
     <div class="row">
       <div class="col-md-8 offset-md-1">
         <p class="Base-subtitle">
-          La façon dont nous utilisons notre argent définit le monde dans lequel nous voulons vivre.
+          <%= raw t('home.strat2.paragraph1') %>
         </p>
       </div>
       <div class="col-md-10 offset-md-1">
         <h2 class="Base-title Base-title--2">
-          Nous sommes une société à but non lucratif qui crée et finance des entreprises
-          luttant à l’échelle mondiale <em>contre le dérèglement climatique.</em>
+          <%= raw t('home.strat2.paragraph2') %>
         </h2>
       </div>
     </div>
@@ -47,29 +45,19 @@
     <div class="row">
       <div class="col-md-5 Section-text--twoColorsLeft">
         <p class="Base-subtitle">
-          Les petits gestes ne suffisent pas.
+          <%= raw t('home.key_points.paragraph1') %>
         </p>
         <h2 class="Base-title Base-title--2">
-          Nous rassemblons de l’argent et des équipes d’entrepreneurs pour créer des entreprises visant
-          la sauvegarde de l’humanité.
+          <%= raw t('home.key_points.paragraph2') %>
         </h2>
       </div>
       <div class="col-md-4 offset-md-2 Section-text--twoColorsRight">
-        <h3 class="Base-title Base-title--3">Des solutions</h3>
-        <p class="Base-text Base-text--withSeparator">
-          Afin de lutter contre le réchauffement climatique des solutions nouvelles ou déjà existantes
-          doivent être déployées rapidement et massivement afin d'avoir un réel impact.
-        </p>
-
-        <h3 class="Base-title Base-title--3">Des entrepreneurs</h3>
-        <p class="Base-text Base-text--withSeparator">
-          L’énergie des créateurs d’entreprise doit être consacrée à 100% à la sauvegarde de la civilisation humaine.
-        </p>
-
-        <h3 class="Base-title Base-title--3">De l'argent</h3>
-        <p class="Base-text Base-text--withSeparator">
-          Nous investissons dans les entreprises capables de réduire l'impact de l'humanité sur le climat.
-        </p>
+        <% t('home.key_points.bullet_points').each do |bullet_point| %>
+          <h3 class="Base-title Base-title--3"><%= bullet_point[:title] %></h3>
+          <p class="Base-text Base-text--withSeparator">
+            <%= bullet_point[:paragraph] %>
+          </p>
+        <% end %>
       </div>
     </div>
   </div>
@@ -80,79 +68,20 @@
     <div class="row">
       <div class="col-md-10">
         <p class="Base-subtitle">
-          Sans changement radical, économique et technologique à l’échelle mondiale, notre civilisation va s'éteindre.
+          <%= raw t('home.projects.paragraph1') %>
         </p>
       </div>
     </div>
     <h2 class="Base-title Base-title--2">
-      Voici 6 exemples d’entreprises que nous allons créer. Chacune d’entre elles aura un impact fondamental
-      contre le réchauffement climatique, à l’échelle mondiale.
+      <%= raw t('home.projects.paragraph2') %>
     </h2>
 
     <div class="row">
-      <div class="col-md-6 col-lg-4">
-        <%= render partial: 'shared/picture_card', locals: {
-          href: '',
-          picture_url: image_path('stockage-electricite-par-gravite.jpg'),
-          picture_alt: 'Stockage électricité par gravité',
-          title: "Mankind Energy",
-          text: "Système de stockage de l’électricité sans métal, pour une alternative définitive au pétrole et
-                à toutes les énergies non renouvelables."
-        } %>
-      </div>
-
-      <div class="col-md-6 col-lg-4">
-        <%= render partial: 'shared/picture_card', locals: {
-          href: '',
-          picture_url: image_path('fumee-cheminee-sur-ciel-bleu.jpg'),
-          picture_alt: "Capture du CO2 dans la fumée des cheminées d'usine",
-          title: "Carbon Capture",
-          text: "Captation du CO2 à la sortie des cheminées d’usines pour l’enfouir dans le sol de
-           façon sécurisée et durable."
-        } %>
-      </div>
-
-      <div class="col-md-6 col-lg-4">
-        <%= render partial: 'shared/picture_card', locals: {
-          href: '',
-          picture_url: image_path('stockage-adn.jpg'),
-          picture_alt: 'Stockage de données sur ADN',
-          title: "DNA Storage",
-          text: "Enregistrer les données informatiques sur de l’ADN de synthèse, pour stocker l’ensemble des données
-                du monde avec très peu d'utilisation d'énergie."
-        } %>
-      </div>
-
-      <div class="col-md-6 col-lg-4">
-        <%= render partial: 'shared/picture_card', locals: {
-          href: '',
-          picture_url: image_path('banque-ethique.jpg'),
-          picture_alt: 'Banque éthique',
-          title: "TP Bank",
-          text: "Banque dédiée à la stabilité du système financier, qui garantie une utilisation sécurisée,
-                rationnelle et éthique de l’argent de ses clients."
-        } %>
-      </div>
-
-      <div class="col-md-6 col-lg-4">
-        <%= render partial: 'shared/picture_card', locals: {
-          href: '',
-          picture_url: image_path('maison-impression-3D.jpg'),
-          picture_alt: 'Maison impression 3D',
-          title: "Liv’In",
-          text: "Technologie de construction en impression 3D du gros-oeuvre de bâtiments à base de matériaux 100% naturels."
-        } %>
-      </div>
-
-      <div class="col-md-6 col-lg-4">
-        <%= render partial: 'shared/picture_card', locals: {
-          href: '',
-          picture_url: image_path('climatisation-sans-electricite.jpg'),
-          picture_alt: 'Climatisation sans électricité',
-          title: "Clim’Planet",
-          text: "Climatisation fonctionnant sans électricité."
-        } %>
-      </div>
+      <% t('home.projects.grid').each do |item| %>
+        <div class="col-md-6 col-lg-4">
+          <%= render partial: 'shared/picture_card', locals: item.merge(picture_url: image_path(item[:picture_url])) %>
+        </div>
+      <% end %>
     </div>
   </div>
 </div>
@@ -164,14 +93,13 @@
     </div>
     <div class="col-12 col-md-4 offset-md-1 Section">
       <p class="Base-subtitle">
-        Notre motivation : la sauvegarde de la planète.
+        <%= raw t('home.engagement.paragraph1') %>
       </p>
       <h2 class="Base-title Base-title--2">
-        Time for the Planet ne distribue aucun dividende à ses actionnaires ou à ses dirigeants. Nos comptes sont publics.
+        <%= raw t('home.engagement.paragraph2') %>
       </h2>
       <p>
-        Les bénéfices générés par les entreprises que nous créons reviennent à Time for the Planet,
-        et permettent de créer de nouvelles entreprises.
+        <%= raw t('home.engagement.paragraph3') %>
       </p>
     </div>
   </div>
@@ -182,21 +110,17 @@
     <div class="row">
       <div class="col-md-8 offset-md-1">
         <p class="Base-subtitle">
-          Nous réussirons ce défi tous ensemble, ou nous échouerons.
+          <%= raw t('home.together.paragraph1') %>
         </p>
       </div>
       <div class="col-md-10 offset-md-1">
         <h2 class="Base-title Base-title--2">
-          Les entreprises créées par Time for the Planet rendront publiques toutes leurs découvertes,
-          selon le principe de l'open-source.
+          <%= raw t('home.together.paragraph2') %>
         </h2>
       </div>
       <div class="col-md-11 offset-md-1">
         <p>
-          Tout ce que nos entreprises découvrent et développent sera public et partagé massivement,
-          même avec nos concurrents.
-          L’humanité est gagnante quelle que soit l’origine d’une solution au dérèglement climatique.
-          Le temps n’est plus à la concurrence, mais à la coopération.
+          <%= raw t('home.together.paragraph3') %>
         </p>
       </div>
     </div>
@@ -208,12 +132,12 @@
     <div class="row">
       <div class="col-md-11">
         <h2 class="Base-title Base-title--2">
-          Une idée, une question, une envie de s'engager financièrement ou humainement ? Contactez-nous !
+          <%= raw t('home.contact.paragraph') %>
         </h2>
       </div>
       <div class="col-md-10">
         <a href="/contact" class="Button Button--underlinedDark">
-          Contacter Time for the Planet <i class="material-icons">arrow_forward</i>
+          <%= raw t('home.contact.button') %> <i class="material-icons">arrow_forward</i>
         </a>
       </div>
     </div>

@@ -1,0 +1,52 @@
+---
+en:
+  become_associate:
+    summary:
+      title: "Become a shareholder"
+      paragraph1: "Help us to raise 1 billion euros to create 100 companies fighting against the global warming."
+      paragraph2: "Each share could be bought for 1 euro."
+      link: "You want to know more about the partner status ?"
+      counters:
+        amount: "already raised"
+        followers: "supporters / partners"
+        elapsed_time: "days since we started"
+      steps:
+        -
+          amount: 300000
+          name: "First step"
+          illustration: 'climatisation-sans-electricite.jpg'
+          description: "To reach 1 billion euros, we need to prove that we are able to raise quickly a minimum amount of 300 000 €. This amount will allow us to finance a communication campaign and to start our first business fighting against the climate change."
+    engagements:
+      -
+        title: "A big action"
+        description: "Invest in a project able to change the world"
+      -
+        title: "Efficiency"
+        description: "Your money is the leverage for Time for the planet to create companies, working to save the planet."
+      -
+        title: "A mission for the world"
+        description: "The only target of Time for the planet is to save the planet. Our benefits will be used exclusively for this purpose. No revenues for our shareholders."
+      -
+        title: "Transparency"
+        description: "Our accounts are public. Our patents will be available for everyone without any compensation"
+    how_to:
+      title: "How become a shareholder ?"
+      paragraphs:
+        - "Currently the company is under modification to be able to welcome more shareholders. In the meantime, you can support us by sharing your willingness to become soon a shareholder. Then you support us in this phase while looking for more partners and financial investors."
+        - "\"Time for the planet\" will be divided in 1 billion parts, each one with one number. One part will cost 1 euro"
+        - "You will be able to buy whatever number of shares you want and at any time in the future,you can buy more."
+      title2: "Being shareholders...do we have any rights ?"
+      bullet_points:
+        -
+          title: "Votes rights"
+          description: "You will be able to vote or being caadidate for the board, (decision structure for Time for the planet). Vote according to one principle: one person = one vote"
+        -
+          title: "Participation"
+          description: "You can create an event in the name of Time for the planet becoming a referent \"Team for the planet\""
+        -
+          title: "Time for the planet: it is You !"
+          description: "You are onwer a part of the company."
+    list:
+      title: "The lastest registred partners"
+      template1: "<b>%{name}</b> registred with <b>%{nb_parts}</b> shares"
+      template2: "%{time} ago"

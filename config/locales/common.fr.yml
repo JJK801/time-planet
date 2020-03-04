@@ -1,0 +1,15 @@
+---
+fr:
+  common:
+    convention: "Charte"
+    act: "J'agis"
+    up: "Retour"
+    back: "Retour"
+    become_associate: 
+      cta: "Je deviens associé·e"
+      why: "Pourquoi devenir associé·e ?"
+      status: "Droit des associé·es"
+      list: "Les associé·es"
+    download:
+      headline: "Des questions sur notre action ?"
+      link: "Téléchargez notre dossier d’investissement pour la planète."

@@ -1,0 +1,8 @@
+---
+fr:
+  associate_form:
+    intro: "Dans 2 minutes, vous aurez validé votre intention d'acquisition des premières actions de Time for the Planet, pour lutter à grande échelle contre le dérèglement climatique."
+    reservation: "La société est actuellement en cours de modification pour nous permettre d'accueillir plus d'associé·es. Dès qu'elle sera prête, nous vous recontacterons pour confirmer votre intention et régler l'achat de vos parts."
+    form:
+      email: "Votre email (requis)"
+      submit: "C'est parti"

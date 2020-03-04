@@ -11,6 +11,8 @@ module TimePlanet
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 5.2
     config.i18n.default_locale = :fr
+    config.i18n.available_locales = [:fr, :en]
+    config.i18n.fallbacks = [:en, :fr]
 
     config.active_job.queue_adapter = :sidekiq
 

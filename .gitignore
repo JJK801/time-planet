@@ -37,3 +37,5 @@ yarn-debug.log*
 
 # ignore files from RubyMine
 .idea
+
+.DS_Store
