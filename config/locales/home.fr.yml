@@ -31,33 +31,33 @@ fr:
           title: "Mankind Energy"
           text: "Système de stockage de l’électricité sans métal, pour une alternative définitive au pétrole et à toutes les énergies non renouvelables."
         -
-          href: ''
-          picture_url: 'fumee-cheminee-sur-ciel-bleu.jpg'
-          picture_alt: 'Capture du CO2 dans la fumée des cheminées d'usine'
+          href: ""
+          picture_url: "fumee-cheminee-sur-ciel-bleu.jpg"
+          picture_alt: "Capture du CO2 dans la fumée des cheminées d'usine"
           title: "Carbon Capture"
           text: "Captation du CO2 à la sortie des cheminées d’usines pour l’enfouir dans le sol de façon sécurisée et durable."
         -
-          href: ''
-          picture_url: 'stockage-adn.jpg'
-          picture_alt: 'Stockage de données sur ADN'
+          href: ""
+          picture_url: "stockage-adn.jpg"
+          picture_alt: "Stockage de données sur ADN"
           title: "DNA Storage"
           text: "Enregistrer les données informatiques sur de l’ADN de synthèse, pour stocker l’ensemble des données du monde avec très peu d'utilisation d'énergie."
         -
           href: ''
-          picture_url: 'banque-ethique.jpg'
-          picture_alt: 'Banque éthique'
+          picture_url: "banque-ethique.jpg"
+          picture_alt: "Banque éthique"
           title: "TP Bank"
           text: "Banque dédiée à la stabilité du système financier, qui garantie une utilisation sécurisée, rationnelle et éthique de l’argent de ses clients."
         -
-          href: ''
-          picture_url: 'maison-impression-3D.jpg'
-          picture_alt: 'Maison impression 3D'
+          href: ""
+          picture_url: "maison-impression-3D.jpg"
+          picture_alt: "Maison impression 3D"
           title: "Liv’In"
           text: "Technologie de construction en impression 3D du gros-oeuvre de bâtiments à base de matériaux 100% naturels."
         -
           href: ''
-          picture_url: 'climatisation-sans-electricite.jpg'
-          picture_alt: 'Climatisation sans électricité'
+          picture_url: "climatisation-sans-electricite.jpg"
+          picture_alt: "Climatisation sans électricité"
           title: "Clim’Planet"
           text: "Climatisation fonctionnant sans électricité."
     engagement:
