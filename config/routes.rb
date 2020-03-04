@@ -3,10 +3,6 @@ Rails.application.routes.draw do
   scope "(:locale)", locale: /[a-z]{2}/ do
     root 'pages#home'
     get 'vision', to: 'pages#vision'
-    get 'devenir-associee', to: 'pages#become_associate', as: 'become_associate'
-
-    root 'pages#home'
-    get 'vision', to: 'pages#vision'
     get 'mentions-legales', to: 'pages#legal', as: 'legal'
     get 'devenir-associee', to: 'pages#become_associate', as: 'become_associate'
 
